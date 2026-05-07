@@ -64,8 +64,11 @@ animation: small-image 600ms ease-in-out 1.2s normal forwards;
 }
 
 
-
-
+.changeHeightAndWidthstyling {
+    width: auto !important;
+    height: auto !important;
+    position: static !important;
+}
 
 
 

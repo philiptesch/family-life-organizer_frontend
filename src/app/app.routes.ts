@@ -6,6 +6,6 @@ import { Logo } from './auth/login/logo/logo';
 
 export const routes: Routes = [ 
      { path: '', redirectTo: 'login', pathMatch: 'full' },
-    { path: '',component: Logo },
+    { path: '',component: Login },
 
 ];
