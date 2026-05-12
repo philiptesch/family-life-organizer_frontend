@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,13 +7,20 @@ import { CommonModule } from '@angular/common';
   templateUrl: './logo.html',
   styleUrl: './logo.scss',
 })
-export class Logo {
+export class Logo implements OnInit  {
 changeHeightAndWidth: boolean = false
 
 
 constructor() {
-this.startLogoAnimation();
+
 }
+
+ ngOnInit() {
+  this.startLogoAnimation();
+    
+  }
+
+
    startLogoAnimation() {
     setTimeout(() => {
       this.changeHeightAndWidth = true

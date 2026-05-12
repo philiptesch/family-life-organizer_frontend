@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Logo } from './logo/logo';
+import AOS from 'aos';
+
 
 @Component({
   selector: 'app-login',
@@ -8,6 +10,13 @@ import { Logo } from './logo/logo';
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })
-export class Login {
+export class Login implements OnInit {
+
+
+  ngOnInit(): void {
+
+    AOS.init()
+  }
+
 
 }

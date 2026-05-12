@@ -1,4 +1,7 @@
 
+@import 'aos/dist/aos.css';
+
+
 .login-wrapper {
     width: 100vw;
     height: 100vh;
@@ -6,6 +9,8 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 0;
+    animation: fadeInImage 600ms ease-out 3s normal forwards;
 
     @media (max-width: 760px) {
         background-image: url("/assets/img/background_login (8).png");
@@ -19,5 +24,18 @@
 }
 
 app-logo {
-    z-index: 10;
+
+}
+
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
