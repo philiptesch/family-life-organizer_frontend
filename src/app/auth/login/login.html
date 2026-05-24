@@ -1,37 +1,35 @@
+<main class="bg-page">
+  <header>
+    <app-logo></app-logo>
+  </header>
 
+  <div [ngClass]="{'child_bg': isChildLoginActive}" class="login-wrapper">
 
+    <section class="headline">
+      
+         <label class="switch">
+        <input (change)="toggleMode()" type="checkbox">
 
+        <span class="slider">
 
-    <main   class="bg-page">
-        <header>
-     <app-logo></app-logo>    
+          <mat-icon class="icon family">
+            family_restroom
+          </mat-icon>
 
-        </header>
-    <div  class="login-wrapper">
+          <mat-icon class="icon child">
+            child_care
+          </mat-icon>
 
-        <section class="headline"> 
+        </span>
+      </label>
+      
+      <app-partent-login></app-partent-login>
 
+      <app-child-login></app-child-login>
 
-        </section>
+ 
 
-     
+    </section>
 
-<label class="switch">
-  <input type="checkbox">
-  <span class="slider">
-      <mat-icon class="icon family">
-      family_restroom
-    </mat-icon>
-
-    <mat-icon class="icon child">
-      child_care
-    </mat-icon>
-  </span>
-</label>
-
-
-
-</div>
-    
+  </div>
 </main>
-
