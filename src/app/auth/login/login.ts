@@ -16,21 +16,30 @@ import { FormsModule } from '@angular/forms';
 export class Login implements OnInit {
 isKidMode = false;
 isChildLoginActive: boolean = false
-
-
+isIntroActive : boolean = true
+hasIntroFinished : boolean = false;
   ngOnInit(): void {
 
-    AOS.init()
+    AOS.init();
+    this.playIntroAnimation()
   }
 
 
 
 
 toggleMode() {
+   if (!this.hasIntroFinished) return;
   this.isChildLoginActive =! this.isChildLoginActive
   console.log(this.isChildLoginActive);
   
 
+}
+
+playIntroAnimation() {
+  setTimeout(() => {
+    this.isIntroActive  =false
+    this.hasIntroFinished = true;
+  }, 5000);
 }
 
 }

@@ -3,7 +3,9 @@
     <app-logo></app-logo>
   </header>
 
-  <div [ngClass]="{'child_bg': isChildLoginActive}" class="login-wrapper">
+  <div [ngClass]="{'child_bg_Animation': isChildLoginActive && hasIntroFinished , 'startAnimationBackground':
+    isIntroActive , 
+    'parent_bg_Animation': hasIntroFinished && !isChildLoginActive  }" class="login-wrapper">
 
     <section class="headline">
       

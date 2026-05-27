@@ -10,23 +10,21 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
-    animation: fadeInImage 600ms ease-out 3s normal forwards;
     display: flex;
     justify-content: center;
-
     @media (max-width: 760px) {
         background-image: url("/assets/img/resized_parent_bg_mobile.png")
 
-
+    }
 
 
 }
-
+.startAnimationBackground {
+   animation: fadeInImage 600ms ease-out 3s normal forwards;
 }
 
-.child_bg {
- background-image: url("/assets/img/resized_child_bg.png") !important;
-
+.child_bg_Animation {
+background-image: url("/assets/img/resized_child_bg.png") !important;
   
     @media (max-width: 760px) {
         background-image: url("/assets/img/resized_child_bg_mobile.png") !important
@@ -35,11 +33,16 @@
 
 }
 
+.child_bg_Animation,
+.parent_bg_Animation {
+  animation: fadeNewBgImage 500ms ease-out forwards;
+}
+
 
 
 
 .bg-page {
-    background:radial-gradient(#7B5E8E, #ffff, #cc91e5); ;
+    background:radial-gradient(#7B5E8E, #ffff, #cc91e5);
 }
 
 
@@ -55,6 +58,20 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes fadeNewBgImage {
+
+     from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  
 }
 
 
@@ -82,8 +99,13 @@
   bottom: 0;
   border-radius: 50px;
   background-color: #D7A8EA;
+    box-shadow:
+    8px 8px 18px rgba(0, 0, 0, 0.18),
+    -4px -4px 12px rgba(255, 255, 255, 0.7),
+    inset 2px 2px 4px rgba(255,255,255,0.4),
+    inset -2px -2px 4px rgba(0,0,0,0.08);
   -webkit-transition: .4s;
-  transition: .4s;
+  transition: all 0.4s ease;
 }
 
 .slider:before {
@@ -97,6 +119,10 @@
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 50%;
+    box-shadow:
+    4px 4px 10px rgba(0,0,0,0.2),
+    -2px -2px 6px rgba(255,255,255,0.8);
+      transition: all 0.4s ease;
 }
 
 .icon {
@@ -126,8 +152,15 @@ input:checked + .slider:before {
   -webkit-transform: translateX(67px);
   -ms-transform: translateX(67px);
   transform: translateX(67px);
+  box-shadow:
+    8px 8px 18px rgba(0,0,0,0.2),
+    inset 2px 2px 4px rgba(255,255,255,0.25),
+    inset -2px -2px 4px rgba(0,0,0,0.15),
+    0 0 20px rgba(117, 164, 84, 0.45);
 }
 
-
+.switch:hover .slider {
+  transform: scale(1.02);
+}
 input:checked + .slider .family { opacity: 0; }
 input:checked + .slider .child { opacity: 1; }
