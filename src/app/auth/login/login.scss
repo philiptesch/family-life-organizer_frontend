@@ -5,15 +5,15 @@
 .login-wrapper {
     width: 100vw;
     height: 100vh;
-    background-image: url("/assets/img/resized_parent_bg.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0;
     display: flex;
     justify-content: center;
+    position: relative;
+      opacity: 0;
+     animation: fadeInImage 600ms ease-out 3s normal forwards;
     @media (max-width: 760px) {
-        background-image: url("/assets/img/resized_parent_bg_mobile.png")
 
     }
 
@@ -21,10 +21,18 @@
 }
 .startAnimationBackground {
    animation: fadeInImage 600ms ease-out 3s normal forwards;
+    opacity: 0;
 }
 
-.child_bg_Animation {
+.child_bg {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 background-image: url("/assets/img/resized_child_bg.png") !important;
+transition: opacity 500ms ease-in-out;
   
     @media (max-width: 760px) {
         background-image: url("/assets/img/resized_child_bg_mobile.png") !important
@@ -33,11 +41,30 @@ background-image: url("/assets/img/resized_child_bg.png") !important;
 
 }
 
-.child_bg_Animation,
-.parent_bg_Animation {
-  animation: fadeNewBgImage 500ms ease-out forwards;
+.parent_bg {
+  position: absolute;
+  inset: 0;
+    opacity: 1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/img/resized_parent_bg.png");
+  transition: opacity 500ms ease-in-out;
+  
+    @media (max-width: 760px) {
+        background-image: url("/assets/img/resized_parent_bg_mobile.png")
+
+}
 }
 
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
 
 
 
@@ -46,7 +73,9 @@ background-image: url("/assets/img/resized_child_bg.png") !important;
 }
 
 
-
+section {
+  z-index: 10;
+}
 
 @keyframes fadeInImage {
     from {
@@ -60,21 +89,6 @@ background-image: url("/assets/img/resized_child_bg.png") !important;
     }
 }
 
-@keyframes fadeNewBgImage {
-
-     from {
-        opacity: 0;
-        transform: translateX(-50%);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-  
-}
-
-
 .switch {
   position: relative;
   display: inline-block;
@@ -87,7 +101,6 @@ background-image: url("/assets/img/resized_child_bg.png") !important;
   width: 100%;
   height: 100%;
   cursor: pointer;
-    z-index: 2;
 }
 
 .slider {
