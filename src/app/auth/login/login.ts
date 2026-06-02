@@ -26,9 +26,10 @@ isChildLoginActive!: boolean
 
 toggleMode() {
   this.isChildLoginActive =! this.isChildLoginActive
-  
 
 }
+
+
 
 
 }
