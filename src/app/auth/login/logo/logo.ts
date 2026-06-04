@@ -9,10 +9,10 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class Logo implements OnInit  {
 changeHeightAndWidth: boolean = false
-isChildActive= input<boolean>();  
+isChildActive = input<boolean>(false);
 
 constructor() {
-    this.readLoginCondition()
+//    this.readLoginCondition()
 }
 
  ngOnInit() {

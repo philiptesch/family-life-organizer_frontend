@@ -10,13 +10,20 @@
 
 </div>
 </section>
-    <div class="family-role">
-        <div class="family-role-parent">
+    <div class="family-role" [class.visible]="changeHeightAndWidth">
+
+        <div class="family-role-box"
+  [class.child]="isChildActive()"
+  [class.parent]="!isChildActive()">
+
     <mat-icon class="material-symbols-outlined">
-    family_restroom
+    {{ isChildActive() ? 'child_care' : 'family_restroom' }}
     </mat-icon>
-    <span> Für Eltern</span>
+    <span>  {{ isChildActive() ? 'Für Kinder' : 'Für Eltern' }}</span>
     </div>
+
+
+
 </div>
 
   

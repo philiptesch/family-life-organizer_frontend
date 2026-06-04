@@ -71,17 +71,43 @@ section {
 
 .family-role {
  opacity: 0;
- transition: opacity 3s ease-in-out; ;
+ transition: opacity 1s ease-in-out; ;
 }
 
-.family-role-parent {
-    color: #8000ff;
-    padding: 7px 15px;
-    border-radius: 10px;
-    background-color: #D19CE7;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.family-role-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 15px;
+  border-radius: 10px;
+
+  transition:
+    background-color 500ms ease,
+    color 500ms ease,
+    transform 300ms ease;
+}
+
+.family-role-box:hover {
+  transform: scale(1.05);
+}
+
+.parent {
+  background-color: #D19CE7;
+  color: #8000ff;
+}
+
+.child {
+  background-color: #e0ecd7;
+  color: #76A454;
 }
 
 .logo-img-headline h1 {
