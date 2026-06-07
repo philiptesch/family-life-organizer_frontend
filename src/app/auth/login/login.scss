@@ -74,7 +74,21 @@ transition: opacity 500ms ease-in-out;
 
 section {
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+
+  .header-togglebar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 120px;
+    position: relative;
+  }
 }
+
+
+
 
 @keyframes fadeInImage {
     from {
@@ -123,9 +137,12 @@ section {
 
 app-partent-login {
       display: flex;
-      padding: 150px 10px;
 }
 
+app-child-login {
+  display: flex;
+
+}
 
 .slider:before {
   position: absolute;
@@ -183,3 +200,67 @@ input:checked + .slider:before {
 }
 input:checked + .slider .family { opacity: 0; }
 input:checked + .slider .child { opacity: 1; }
+
+
+
+.child-info-content {
+  position: absolute;
+  top: 130px;
+
+  .speech-bubble-content {
+    position: relative;
+
+    img {
+    height: 280px;
+    width: auto;
+    }
+
+    .speech-bubble {
+    position: absolute;
+    top: -40px;
+    left: 120px;
+    max-width: 140px;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    line-height: 1.4; 
+    border: outset 1px black;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    }
+
+    /* Spitze der Sprechblase */
+    .speech-bubble::after {
+      content: "";
+      position: absolute;
+      left: 40px;
+      bottom: -15px;
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 16px solid white;
+    }
+  }
+}
+
+
+
+.header-togglebar:hover + .child-info-content .speech-bubble {
+  opacity: 1;
+  visibility: visible;
+}
+
+.login-part {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10; 
+    flex: 1;
+    margin-top: 50px;
+}

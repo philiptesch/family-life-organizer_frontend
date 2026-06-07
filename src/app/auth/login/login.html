@@ -15,7 +15,11 @@
   <div class="child_bg" [class.visible]="isChildLoginActive"></div>
 
     <section class="headline">
+
+      <div class="header-togglebar">
       
+
+
          <label class="switch">
         <input (change)="toggleMode()" type="checkbox">
 
@@ -31,11 +35,23 @@
 
         </span>
       </label>
-      
+      </div>
+
+      <div class="child-info-content">
+        <div class="speech-bubble-content">
+        <img src="\assets\img\childs.png" alt="">
+         <div class="speech-bubble">
+    Hier kannst du auswählen, ob du dich als Kind oder als Elternteil anmeldest.
+    </div>
+      </div>
+         </div>
+
+
+      <div class="login-part">
       <app-partent-login></app-partent-login>
 
       <app-child-login></app-child-login>
-
+        </div>  
      </section>
 
   </div>
