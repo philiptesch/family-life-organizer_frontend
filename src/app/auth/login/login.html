@@ -48,9 +48,12 @@
 
 
       <div class="login-part">
-      <app-partent-login></app-partent-login>
 
+      @if(!isChildLoginActive) {
+      <app-partent-login ></app-partent-login>
+      }@else{
       <app-child-login></app-child-login>
+      }
         </div>  
      </section>
 
