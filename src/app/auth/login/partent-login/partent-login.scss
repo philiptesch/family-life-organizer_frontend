@@ -39,4 +39,19 @@ section {
 }
 
 
+.login-Area-Access {
+    display: flex;
+    justify-content: center;
 
+
+    >div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+.email-Area {
+    display: flex;
+}
