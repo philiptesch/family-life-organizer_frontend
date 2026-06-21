@@ -11,4 +11,14 @@ import {MatIconModule} from '@angular/material/icon';
 export class PartentLogin {
   checkPasswordVisible:boolean = false
 
+  constructor() {
+//    this.readLoginCondition()
+}
+
+  showPassword() {
+    this.checkPasswordVisible = !this.checkPasswordVisible 
+    
+
+  }
+
 }

@@ -15,36 +15,29 @@
             <form class="example-form">
             <div class="email-Area">
             <label class="form-label" for="name">Email-Adresse:</label>
-            </div>
-            <mat-form-field class="example-full-width">
-            <mat-label>Email</mat-label>
-            <input type="email" matInput
+           <div class="email-field">  
+              <mat-icon class="custom-icon">mail
+    </mat-icon>
+            <input type="email"
            placeholder="Ex. pat@example.com">
-         <mat-hint>Errors appear instantly!</mat-hint>
-   
-             </mat-form-field>
-
-
-
-                  <div class="email-Area">
-            <label class="form-label" for="name">Password:</label>
             </div>
-            <div>
-            <mat-form-field class="example-full-width">
-            <mat-label>Password</mat-label>
-            <div>
-            <input type="password" matInput>
+            </div>
 
-        @if (!checkPasswordVisible) {
-                <mat-icon class="material-symbols-outlined"> visibility
+
+            <div class="password-Area">
+            <label class="form-label" for="name">Password:</label>
+            <div class="password-field">
+            <mat-icon class="custom-icon-password">lock
+    </mat-icon>   
+            <input   [type]="checkPasswordVisible ? 'text' : 'password'"  placeholder="Password">
+
+        @if (checkPasswordVisible) {
+                <mat-icon class="password-icon" (click)="showPassword()"> visibility
                 </mat-icon>}@else {
-                <mat-icon class="material-symbols-outlined"> visibility_off
+                <mat-icon class="password-icon" (click)="showPassword()"> visibility_off
                 </mat-icon>
     }
-    </div>
-         <mat-hint>Errors appear instantly!</mat-hint>
-   
-             </mat-form-field>
+                </div>
               </div>
 </form>
 
