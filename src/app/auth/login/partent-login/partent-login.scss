@@ -1,3 +1,5 @@
+
+
 section {
     width: 450px;
     height: 600px;
@@ -58,17 +60,25 @@ section {
     width: 100%;
     gap: 5px;
 
-
+    label {
+        font-weight: bolder;
+        font-size: 16px;
+    }
 
     >.email-field {
         width: 100%;
         display: flex;
         align-items: center;
-        border: 1px  black;
+        border: 1px  #a0a0a0;
         border-style: outset;
         border-radius: 10px;
         padding: 10px;
+        background-color: #f8f8f8;
+        transition: border-color 0.2s ease;
 
+           &:focus-within {
+        border-color: #333;
+   }
 
         .custom-icon {
         color: #2d2d2d;
@@ -98,7 +108,10 @@ section {
     gap: 5px;
     margin-top: 30px;
 
- 
+      label {
+        font-weight: bolder;
+        font-size: 16px;
+    }
 
 
 
@@ -106,10 +119,17 @@ section {
         width: 100%;
         display: flex;
         align-items: center;
-        border: 1px  black;
+        border: 1px  #a0a0a0;
         border-style: outset;
         border-radius: 10px;
         padding: 10px;
+        background-color: #f8f8f8;
+        transition: border-color 0.2s ease;
+
+
+             &:focus-within {
+        border-color: #333;
+   }
 
 
         .custom-icon-password {
@@ -137,3 +157,36 @@ section {
     }
 }
 
+.user-remain-registred-Area{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+
+    >.user-remain-registred {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+
+       span {
+        color: black;
+        font-size: 14px;    
+        font-weight: bolder;
+       }
+
+    }
+}
+
+  .forgot-password {
+        color: #8000ff;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bolder;
+
+        &:hover {
+          text-shadow: 6px 3px 8px #030002;
+        font-weight: bolder;
+        }
+
+               }

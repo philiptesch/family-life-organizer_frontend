@@ -6,7 +6,8 @@ import {MatIconModule} from '@angular/material/icon';
   selector: 'app-partent-login',
   imports: [MatInputModule,MatFormFieldModule, MatIconModule ],
   templateUrl: './partent-login.html',
-  styleUrl: './partent-login.scss',
+  styleUrls: ['./partent-login.scss', './checkbox-partent.login.scss']
+
 })
 export class PartentLogin {
   checkPasswordVisible:boolean = false
