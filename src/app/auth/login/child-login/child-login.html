@@ -5,8 +5,76 @@
         <h6> Schön, dich wiederzusehen </h6>
 
 
+    </div>  <div class="login-Area-Access">
+
+        <div>
+        
+            <form class="example-form">
+            <div class="email-Area">
+            <label class="form-label" for="name">Benutzname oder Email:</label>
+           <div class="email-field">  
+              <mat-icon class="custom-icon">mail
+    </mat-icon>
+            <input type="email"
+           placeholder="Ex. pat@example.com">
+            </div>
+            </div>
+
+
+            <div class="password-Area">
+            <label class="form-label" for="name">Password:</label>
+            <div class="password-field">
+            <mat-icon class="custom-icon-password">lock
+    </mat-icon>   
+            <input   [type]="checkPasswordVisible ? 'text' : 'password'"  placeholder="Password">
+
+        @if (checkPasswordVisible) {
+                <mat-icon class="password-icon" (click)="showPassword()"> visibility
+                </mat-icon>}@else {
+                <mat-icon class="password-icon" (click)="showPassword()"> visibility_off
+                </mat-icon>
+    }
+                </div>
+              </div>
+
+
+          
+
+              <div class="button-Section">
+
+              <button> Anmelden</button>
+              
+        </div>
+        
+</form>
     </div>
+        </div>
+
+     <div class="auth-divider">
+    <hr>
+    <span>oder weiter mit</span>
+    <hr>
+    </div>
+
+
+
+    <div class="login-with-google">
+
+    <div class="google-login">
+     <button>
+      <img class="apps-icon" src="\assets\img\apps.png" alt="">
+            Mit Code Anmelden
+            <span> Erhalte einen Code von deinen Eltern</span>
+        </button>
+    </div>
+
+   <div class="register-Section">
+            <span> noch kein Konto ?</span>  <span> Registrieren</span>
+
+        </div>
+        </div>
 
 </main>
 </section>
 
+ 

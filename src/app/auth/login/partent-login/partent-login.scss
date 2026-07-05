@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 
 section {
@@ -11,9 +14,9 @@ section {
 
 
     >main {
-        padding: 30px;
-         width: 100%;
-
+        padding: 20px;
+        width: 100%;
+        padding-top: 40px;
       
 
         >div {
@@ -160,7 +163,7 @@ section {
 .user-remain-registred-Area{
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 40px;
     align-items: center;
     margin-bottom: 20px;
     >.user-remain-registred {

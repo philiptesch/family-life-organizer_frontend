@@ -8,5 +8,14 @@ import {MatIconModule} from '@angular/material/icon';
   styleUrl: './child-login.scss',
 })
 export class ChildLogin {
+  checkPasswordVisible:boolean = false
 
+
+
+
+    showPassword() {
+    this.checkPasswordVisible = !this.checkPasswordVisible 
+    
+
+  }
 }
