@@ -40,7 +40,7 @@ section {
 
          }
 
-         img {
+         .child-icon {
             width: 50px;
             margin-left: 5px;
             margin-bottom: 10px;
@@ -235,3 +235,74 @@ section {
     white-space: nowrap;
 
 }
+
+.login-with-code {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .code-login {
+
+
+        .apps-icon {
+            width: 32px;
+            height: 45px;
+        }
+
+        >button  {
+        border: solid 1px #737070;
+        padding: 12px 30px;
+        border-radius: 12px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.3s ease;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+
+
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &:hover {
+        border: solid 1px #75A354;
+        background-color: #f6fbf2;
+        box-shadow: 0 4px 12px rgba(117, 163, 84, 0.2);
+        color:#75A354 ;
+    }
+        }
+
+    }
+
+}
+
+
+    .register-Section {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+         span:nth-of-type(2) {
+            color: #75A354;
+            margin-left: 10px;
+            font-weight: bolder;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+  }
+    
+}
+
