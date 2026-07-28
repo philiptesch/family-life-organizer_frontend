@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
+import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-partent-login',
-  imports: [MatInputModule,MatFormFieldModule, MatIconModule ],
+  imports: [MatInputModule,MatFormFieldModule, MatIconModule, RouterModule ],
   templateUrl: './partent-login.html',
   styleUrls: ['./partent-login.scss', './checkbox-partent.login.scss']
 
