@@ -4,5 +4,22 @@ section {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-background-image: url("/assets/img/background_login2 (2) (1) (3).png") !important;
+background-image: url("/assets/img/background_login2 (3).png");
+    object-fit: cover;
+
+
+        @media (max-width: 760px) {
+        background-image: url("/assets/img/background_login2_resizded_height.png") 
+
+}
+}
+
+.bg-page {
+    background:radial-gradient(#7B5E8E, #ffff, #cc91e5);
+    height: 100%;
+}
+
+app-header {
+  z-index: 999;
+  position: relative;
 }

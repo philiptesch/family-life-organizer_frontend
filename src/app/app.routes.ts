@@ -8,6 +8,6 @@ import { Register } from './auth/register/register';
 export const routes: Routes = [ 
      { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: '',component: Login },
-    {path: 'signUp', component: Register }
+    {path: 'signUp', component: Register },
 
 ];
