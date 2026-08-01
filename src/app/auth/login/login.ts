@@ -6,10 +6,11 @@ import { ChildLogin } from './child-login/child-login';
 import {MatIconModule} from '@angular/material/icon';
 import AOS from 'aos';
 import { FormsModule } from '@angular/forms';
+import { Header } from '../../shared-components/header/header';
 
 @Component({
   selector: 'app-login',
-  imports: [CommonModule, Logo, MatIconModule, PartentLogin, ChildLogin, FormsModule   ],
+  imports: [CommonModule, Logo, MatIconModule, PartentLogin, ChildLogin, FormsModule, Header   ],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })

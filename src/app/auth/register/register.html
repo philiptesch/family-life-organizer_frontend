@@ -1,17 +1,110 @@
+<main class="bg-page">
 
-<main class="bg-page"> 
-
-      <header>
+  <header>
     <app-header></app-header>
-
-
-
   </header>
 
-<section>
+  <section>
+
+    <div class="register-section">
+
+      <img src="/assets/img/childs_and_parent.png" alt="">
+
+      <div class="register-card">
+
+        <div class="register-card-headline">
+          <h1>Konto erstellen</h1>
+          <h6>Erstelle ein Familienkonto</h6>
+        </div>
+
+        <div class="register-form">
+
+          <form class="example-form">
 
 
 
-    
-</section>
+               <div class="family-name-Area">
+              <label class="form-label" for="email">Familien-Name:</label>
+                
+              <div class="family-name-field">
+                      <mat-icon class="custom-icon">family_restroom
+                  </mat-icon>   
+
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Familien-Name">
+              </div>
+            </div>
+
+
+
+            <div class="email-Area">
+              <label class="form-label" for="email">Email-Adresse:</label>
+
+              <div class="email-field">
+                       <mat-icon class="custom-icon">email
+                  </mat-icon>   
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Ex. pat@example.com">
+              </div>
+            </div>
+
+            <div class="password-Area">
+              <label class="form-label" for="password">Password:</label>
+
+              <div class="password-field">
+                        <mat-icon class="custom-icon-password">lock
+                  </mat-icon>   
+                <input
+                  id="password"
+                  [type]="passwordIconVisible ? 'text' : 'password'"  placeholder="Password"
+                  placeholder="Mindestens 8 Zeichen">
+
+              @if (passwordIconVisible) {
+                <mat-icon class="password-icon" (click)="showPassword()"> visibility
+                </mat-icon>}@else {
+                <mat-icon class="password-icon" (click)="showPassword()"> visibility_off
+                </mat-icon>
+    }
+
+              </div>
+            </div>
+
+            <div class="password-confirm-Area">
+              <label class="form-label" for="password">Password bestätigen:</label>
+
+              <div class="password-confirm-field">
+                         <mat-icon class="custom-icon-password">lock
+                  </mat-icon>   
+                <input
+                  id="password"
+                  [type]="passwordConfirmIconVisible ? 'text' : 'password'"  placeholder="Password"
+                  placeholder="Password wiederholen">
+                  @if (passwordConfirmIconVisible) {
+                <mat-icon class="password-icon" (click)="showConfirmPassword()"> visibility
+                </mat-icon>}@else {
+                <mat-icon class="password-icon" (click)="showConfirmPassword()"> visibility_off
+                </mat-icon>
+    }
+
+              </div>
+
+              
+            </div>
+
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
 </main>
