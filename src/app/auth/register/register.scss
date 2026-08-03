@@ -15,6 +15,7 @@ section {
   object-fit: cover;
   display: flex;
   justify-content: center;
+  padding-top: 120px;
   
 
 
@@ -36,15 +37,7 @@ app-header {
 
 
 
-.register-section {
 
-
-    img {
-    height: 280px;
-    width: auto;
-    transform: translateY(30px);
-    }
-}
 
 
 form {
@@ -56,7 +49,7 @@ form {
 
 .register-card {
     width: 450px;
-    height: 650px;
+    height: 730px;
     background-color: white;
     display: flex;
     border-radius: 30px;
@@ -296,4 +289,52 @@ form {
     cursor: pointer;
     height: 24px !important;
     width: 30px !important;
+}
+
+
+.child-section {
+
+
+    >div {
+
+        h5 {
+        margin-block-start: 5px;
+        margin-block-end: 5px;
+        font-size: 20px;
+        }
+
+
+        h6 {
+        margin-block-start: 10px;
+        margin-block-end: 0;
+        font-size: 14px;
+        color: #5f5d5d;
+        font-weight: bolder;
+        }
+    }
+}
+
+
+.child-selection {
+    display: flex;
+    flex-direction: column;
+    border: outset 4px black;
+    max-height: 129px;
+
+.child_container  {
+display: flex;
+align-items: flex-start;
+padding: 10px;
+ 
+
+    .avatar-icon {
+    width: 80px;
+    height: auto;    
+    }
+
+.child-Area {
+    margin-top: 6px;
+}
+
+}
 }
