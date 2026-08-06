@@ -43,7 +43,7 @@ app-header {
 form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 
@@ -58,7 +58,7 @@ form {
     z-index: 999;
     position: relative;
     justify-content: start;
-    padding: 25px 20px;
+    padding: 5px 20px;
     flex-direction: column;
     
 }
@@ -96,7 +96,7 @@ form {
     flex-direction: column;
     width: 100%;
     gap: 5px;
-    margin-top: 20px;
+
 
 
        label {
@@ -293,9 +293,28 @@ form {
 
 
 .child-section {
+display: flex;
+flex-direction: column;
+border: outset 4px black;
+align-items: flex-start;
+background-color: #efd5f9;
+padding: 10px;
+ 
+
+    .child-Area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 20px;
+    .child-headline {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 10px;
 
 
-    >div {
+ 
 
         h5 {
         margin-block-start: 5px;
@@ -303,89 +322,135 @@ form {
         font-size: 20px;
         }
 
-
-        h6 {
-        margin-block-start: 10px;
-        margin-block-end: 0;
-        font-size: 14px;
-        color: #5f5d5d;
-        font-weight: bolder;
-        }
     }
+}
+
 }
 
 
 .child-selection {
     display: flex;
-    flex-direction: column;
-    border: outset 4px black;
-    max-height: 129px;
+    padding: 0 10px;
+    align-items: center;
+    gap: 5px;    
+    padding: 10px;
+    .childs-avatar {
+        display: flex;
 
-.child_container  {
-display: flex;
-align-items: flex-start;
-position: relative;
-padding: 15px 10px; 
 
-    .avatar-icon {
-    width: 75px;
-    height: auto;    
+        .avatar-icon {
+        width: 60px;
+        height:auto;
+        }
+
+
+
     }
 
-.child-content {
-flex: 1;   
-position: relative;
-padding-right: 40px;
+    .childsNumber {
 
-.child-Area {
-    margin-top: 6px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-
-    .child-field {
-    border: solid 1px #8a8585;
-    padding: 7px;
-    border-radius: 6px;
-    display: flex;
-    background-color: #f8f8f8;
-    align-items: center;    
-
- 
+        >span {
+        color: #434141;
+        font-weight: bolder;
+        }
+    }
 
 
+}
 
-    input {
+
+.btn-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+
+  button {
+    position: relative;
+    overflow: hidden;
     border: none;
-    width: 100%;
-    background: transparent;
-    outline: none;
+    padding: 15px;
+    width: 50%;
+    border-radius: 30px;
+    background-color: #8000FF;
+    color: white;
+    font-weight: bolder;
     font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-bottom: 10px;  
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(231, 231, 231, 0.2);
+      transition: left 600ms ease;
     }
 
+    &:hover::before {
+      left: 100%;
+    }
+
+    &:hover {
+      color: black;
+    }
 
 
    
-  
+
+  }
+     span {
+    color: black;
+    font-size: 16px;
+    }
+
+    span:nth-of-type(2) { 
+    color: #8000FF;
+    cursor: pointer;    
+    font-weight: bold;
+    font-size: 16px;    
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 }
- 
-
-}
- }
-    .delete-icon-section {
-    position: absolute;
-    right: 5px;
-    top: 7px;
-    
-}
-
-}
 
 
-.child-Age-content {
+.register-card-headline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+.headline {
 display: flex;
-margin-top: 10px;
-gap: 5px;    
+flex-direction: column;
+}
+
+
+}
+  
+
+.child-icon {
+        width: 65px;
+        height:auto;
+        margin-bottom: 10px;
+    }
+
+
+.arrow {
+color: black; 
+  transition: color 0.3s ease; 
+  cursor: pointer;
+
+  &:hover {
+    color: #8503ff;
+    transform: scale(1.2)
+  }
 }
