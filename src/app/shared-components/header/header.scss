@@ -1,5 +1,14 @@
 section {
 display:flex;
+
+
+    @media (max-width: 600px) {
+        background-image: url("/assets/img/background_login2_resizded_height.png");
+        background-position: right;
+        background-size: cover;
+        justify-content: center;
+    }
+
 padding: 25px 150px;
     .headline {
     display: flex;

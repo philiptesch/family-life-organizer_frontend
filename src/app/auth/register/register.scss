@@ -11,7 +11,7 @@ section {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/assets/img/background_login2 (3).png");
+  background-image: url("/assets/img/background_login2 (2).png");
   object-fit: cover;
   display: flex;
   justify-content: center;
@@ -19,8 +19,13 @@ section {
   
 
 
-        @media (max-width: 760px) {
-        background-image: url("/assets/img/background_login2_resizded_height.png") 
+        @media (max-width: 1160px) {
+        background-image: url("/assets/img/background_login2_resizded_height.png");
+        background-position: right;
+        background-size: cover;
+
+        
+   
 
 }
 }
@@ -60,6 +65,13 @@ form {
     justify-content: start;
     padding: 5px 20px;
     flex-direction: column;
+
+       @media (max-width: 500px) {
+        width: 100%;
+         height: 635px;
+    }
+
+   
     
 }
 
@@ -299,6 +311,12 @@ border: outset 4px black;
 align-items: flex-start;
 background-color: #efd5f9;
 padding: 10px;
+
+
+    @media (max-width: 400px) {
+         padding: 5px;
+        
+         }
  
 
     .child-Area {
@@ -334,6 +352,17 @@ padding: 10px;
     align-items: center;
     gap: 5px;    
     padding: 10px;
+    
+    
+        @media (max-width: 500px) {
+        display: none;
+        }
+
+
+     
+
+
+    
     .childs-avatar {
         display: flex;
 
@@ -408,6 +437,8 @@ padding: 10px;
      span {
     color: black;
     font-size: 16px;
+
+    
     }
 
     span:nth-of-type(2) { 
