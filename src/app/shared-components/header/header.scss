@@ -1,20 +1,24 @@
 section {
 display:flex;
-
+padding: 25px 150px;
 
     @media (max-width: 600px) {
-        background-image: url("/assets/img/background_login2_resizded_height.png");
-        background-position: right;
-        background-size: cover;
         justify-content: center;
     }
 
-padding: 25px 150px;
+       @media (max-width: 400px) {
+          padding: 0;
+         }
+
     .headline {
     display: flex;
     align-items: center;
     gap: 10px;
 
+
+     @media (max-width: 400px) {
+          padding: 15px;
+         }
         .logo-img {
         width: 60px;
         height: 60px;

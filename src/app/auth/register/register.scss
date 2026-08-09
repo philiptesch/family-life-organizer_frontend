@@ -8,26 +8,34 @@
 section {
   position: absolute;
   inset: 0;
+
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("/assets/img/background_login2 (2).png");
-  object-fit: cover;
+
   display: flex;
   justify-content: center;
   padding-top: 120px;
-  
 
+  @media (max-width: 1160px) {
+    background-image: url("/assets/img/background_login2_resizded_height.png");
+    background-position: right;
+    background-size: cover;
+  }
 
-        @media (max-width: 1160px) {
-        background-image: url("/assets/img/background_login2_resizded_height.png");
-        background-position: right;
-        background-size: cover;
+  @media (max-width: 400px) {
+    padding-top: 80px;
+  }
 
-        
-   
+  @media (max-width: 1200px) and (max-height: 850px) {
+    position: relative;
+    padding-top: 20px;
+  }
 
-}
+  @media (max-width: 1350px) and (max-height: 850px) {
+    padding-top: 0;
+  }
 }
 
 .bg-page {
@@ -49,12 +57,16 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+         @media (max-width: 400px) {
+        gap: 10px;
+         }
 }
 
 
 .register-card {
     width: 470px;
-    height: 730px;
+    height: 800px;
     background-color: white;
     display: flex;
     border-radius: 30px;
@@ -68,8 +80,15 @@ form {
 
        @media (max-width: 500px) {
         width: 100%;
-         height: 635px;
+        height: 700px;
     }
+
+
+       @media (max-width: 400px) {
+        width: 100%;
+        height: 640px;
+    }
+
 
    
     
@@ -111,6 +130,7 @@ form {
 
 
 
+
        label {
         font-weight: bolder;
         font-size: 14px;
@@ -129,6 +149,12 @@ form {
     border-radius: 10px;
     padding: 10px;
     background-color: #f8f8f8;
+
+
+      @media (max-width: 400px) {
+         padding: 5px;
+        
+         }
 
 
            .custom-icon {
@@ -178,6 +204,11 @@ form {
     border-radius: 10px;
     padding: 10px;
     background-color: #f8f8f8;
+
+          @media (max-width: 400px) {
+         padding: 5px;
+        
+         }
 
 
           .custom-icon {
@@ -229,6 +260,12 @@ form {
     background-color: #f8f8f8;
 
 
+          @media (max-width: 400px) {
+         padding: 5px;
+        
+         }
+
+
       .custom-icon-password {
         color: #2d2d2d;
         height: 24px !important;
@@ -278,6 +315,12 @@ form {
     background-color: #f8f8f8;
 
 
+          @media (max-width: 400px) {
+         padding: 5px;
+        
+         }
+
+
       .custom-icon-password {
         color: #2d2d2d;
         height: 24px !important;
@@ -314,7 +357,7 @@ padding: 10px;
 
 
     @media (max-width: 400px) {
-         padding: 5px;
+         padding: 0;
         
          }
  
@@ -338,6 +381,13 @@ padding: 10px;
         margin-block-start: 5px;
         margin-block-end: 5px;
         font-size: 20px;
+
+
+         @media (max-width:380px) {
+        font-size: 17px;
+        
+         }
+ 
         }
 
     }
@@ -434,7 +484,17 @@ padding: 10px;
    
 
   }
-     span {
+   
+
+
+}
+
+
+.register {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  span {
     color: black;
     font-size: 16px;
 
@@ -472,6 +532,10 @@ flex-direction: column;
         width: 65px;
         height:auto;
         margin-bottom: 10px;
+
+        @media (max-width: 500px) {
+        margin-bottom: 0;
+        }
     }
 
 
@@ -480,8 +544,19 @@ color: black;
   transition: color 0.3s ease; 
   cursor: pointer;
 
+
+     @media (max-width:380px) {
+    width: 20px;
+    height: 20px; 
+         }
   &:hover {
     color: #8503ff;
     transform: scale(1.2)
   }
+}
+
+
+.validation-text {
+    font-size: 14px;
+    color: red;   
 }
