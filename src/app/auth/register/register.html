@@ -8,9 +8,9 @@
 
     <div class="register-section">
 
-      <!-- <img src="/assets/img/childs_and_parent.png" alt="">-->
+      <app-child-avatar [ngClass]="{'showChildAvatar': childAvatarPage}"></app-child-avatar>
 
-      <div class="register-card">
+      <div [ngClass]="{'visiblity': childAvatarPage}" class="register-card">
 
         <div class="register-card-headline">
          <div class="headline">
@@ -110,7 +110,7 @@
              
                 </div>
                    <div class="move-to-other-section">
-                <mat-icon class="arrow"> arrow_forward_ios</mat-icon>
+                <mat-icon class="arrow" (click)="showChildAvatar()"> arrow_forward_ios</mat-icon>
                    </div>
 
                

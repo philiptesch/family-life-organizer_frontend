@@ -38,6 +38,21 @@ section {
   }
 }
 
+
+.showChildAvatar {
+    display: block !important; 
+}
+
+.visiblity {
+    visibility: hidden;
+}
+
+app-child-avatar {
+    display: none;
+}
+
+
+
 .bg-page {
     background:radial-gradient(#7B5E8E, #ffff, #cc91e5);
     height: 100%;
