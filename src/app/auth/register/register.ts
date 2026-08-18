@@ -14,7 +14,7 @@ import { ChildAvatar } from './child-avatar/child-avatar';
 export class Register {
 passwordIconVisible: boolean = false;
 passwordConfirmIconVisible: boolean = false;
-childAvatarPage: boolean = false
+childAvatarPage: boolean = true
 
 
 showPassword() {
