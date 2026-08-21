@@ -3,7 +3,7 @@ section {
     justify-content: center;
     width: 470px;
     height: 800px;
-    background-color: white;
+    background-color: #ECEEFE;
     display: flex;
     border-radius: 30px;
     border: solid 4px black;
@@ -14,6 +14,7 @@ section {
     main {
         width: 100%;
         padding: 20px 20px;
+        box-sizing: border-box;
         .headline {
             display: flex;
             align-items: center;
@@ -72,4 +73,146 @@ section {
     right: 130px;  
     }
    }
+}
+
+.child-query {
+margin-top: 20px;
+
+.child-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+
+label {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 5px;
+ 
+}
+
+}
+
+.child-name-area {
+     width: 100%;
+    display: flex;
+    align-items: center;
+    border: 3px #000000;
+    border-style: outset;
+    border-radius: 10px;
+    background-color: #f8f8f8;   
+
+
+    .child-name-field {   
+    border: none;
+    font-size: 20px;
+    outline: none;
+    background: transparent;
+    height: 100%;
+    padding: 10px;
+
+    }
+
+
+}
+
+
+}
+
+
+.Child-age-and-birth {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+
+}
+
+
+
+
+.child-age {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+     max-width: 120px;
+  
+
+
+label {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 5px;
+ 
+}
+
+}
+
+.child-age-area {
+     width: 100%;
+    display: flex;
+    align-items: center;
+    border: 3px #000000;
+    border-style: outset;
+    border-radius: 10px;
+    background-color: #f8f8f8;   
+
+
+    .child-age-field {   
+    border: none;
+    font-size: 20px;
+    outline: none;
+    background: transparent;
+    height: 100%;
+    padding: 10px;
+
+    }
+
+
+}
+
+
+
+
+
+.child-birth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    flex: 1;
+
+
+label {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 5px;
+ 
+}
+
+}
+
+.child-birth-area {
+     width: 100%;
+    display: flex;
+    align-items: center;
+    border: 3px #000000;
+    border-style: outset;
+    border-radius: 10px;
+    background-color: #f8f8f8;   
+
+
+    .child-birth-field {   
+    border: none;
+    font-size: 20px;
+    outline: none;
+    background: transparent;
+    height: 100%;
+    padding: 10px;
+    width: 100%;
+
+    }
+
+
 }
