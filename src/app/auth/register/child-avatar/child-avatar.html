@@ -62,12 +62,80 @@
                 </div>
             </div> 
 
-
+           
 
                 
 
             </div>
+             <div class="genderSection">
+ 
 
+                <label class="label-gender" for=""> Geschlecht</label>
+                <div class="child-gender-query">
+
+                <div class="gender-boy">
+                <input type="radio" name="gender" id="boy">
+                <label for=""> Junge</label> 
+                 </div>   
+                 
+                <div class="gender-girl">
+                <input type="radio" name="gender" id="girl">
+                <label for=""> Mädchen</label> 
+                </div>   
+                </div>    
+                
+            
+
+            </div>
+
+
+            <div class="child-Image-query" >
+             <div class="child-Image-Selection-Section">  
+                <div class="child-Image-query-headline">
+
+                    <h3>Vorgefertige Bilder</h3>
+                    <h6> Wähle ein Bild aus</h6>
+                </div>
+
+
+                <div class="child-Image-Selection">
+
+                    <div class="child-Image-field" [class.selected]="selectedAvatar === 1"
+                    (click)="selectAvatar(1)">
+                    <img class="child-img"  src="/assets/img/avatar_single_1.png" alt="">
+                    </div>    
+
+                    <div class="child-Image-field" [class.selected]="selectedAvatar === 2"
+                    (click)="selectAvatar(2)">
+                    <img class="child-img"  src="/assets/img/avatar_single_1.png" alt="">
+                     </div>
+
+                    <div class="child-Image-field" [class.selected]="selectedAvatar === 3"
+                    (click)="selectAvatar(3)">
+                    <img class="child-img"  src="/assets/img/avatar_single_1.png" alt="">
+                    </div>
+
+                    <div class="child-Image-field" [class.selected]="selectedAvatar === 4"
+                    (click)="selectAvatar(4)">
+                    <img class="child-img"  src="/assets/img/avatar_single_1.png" alt="">
+                    </div>
+
+
+                    <div class="child-Image-field" [class.selected]="selectedAvatar === 5"
+                    (click)="selectAvatar(5)">
+                    <img class="child-img"  src="/assets/img/avatar_single_1.png" alt="">
+                    </div>
+
+
+                    <div class="child-Image-field"       [class.selected]="selectedAvatar === 6"
+                    (click)="selectAvatar(6)">
+                    <img class="child-img"  src="/assets/img/avatar_single_1.png" alt="">
+                    </div>
+                </div>
+            </div> 
+
+
+            </div>
 
 
 

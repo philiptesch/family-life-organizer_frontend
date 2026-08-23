@@ -11,4 +11,12 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class ChildAvatar {
 
+  selectedAvatar: number | null = null;
+
+
+
+
+  selectAvatar(avatar: number) {
+    this.selectedAvatar = avatar;
+}
 }
