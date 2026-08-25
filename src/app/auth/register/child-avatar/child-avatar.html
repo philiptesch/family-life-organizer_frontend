@@ -17,10 +17,11 @@
 
 
             <div>
-                <img  class="child-img" src="/assets/img/avatar_single_1.png" alt="">
+                <img  class="child-img" [src]="imageSrc" alt="">
 
-                <img class="camera-img" src="/assets/img/camera.png" alt="">
+                <img (click)="fileInput.click()" class="camera-img" src="/assets/img/camera.png" alt="">
 
+                <input #fileInput class="image-file" type="file" accept="image/*" (change)="onFileSelected($event)"   >
 
             </div>
 

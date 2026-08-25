@@ -12,14 +12,14 @@
 
         <div>
         
-            <form class="example-form">
+            <form #form="ngForm" class="example-form" (ngSubmit)="submitForm($event)">
             <div class="email-Area">
             <label class="form-label" for="name">Email-Adresse:</label>
            <div class="email-field">  
               <mat-icon class="custom-icon">mail
     </mat-icon>
             <input type="email"
-           placeholder="Ex. pat@example.com">
+           placeholder="Ex. pat@example.com" [(ngModel)]="User.email"  name="email"  #email="ngModel">
             </div>
             </div>
 
@@ -29,7 +29,7 @@
             <div class="password-field">
             <mat-icon class="custom-icon-password">lock
     </mat-icon>   
-            <input   [type]="checkPasswordVisible ? 'text' : 'password'"  placeholder="Password">
+            <input   [type]="checkPasswordVisible ? 'text' : 'password'"  placeholder="Password" [(ngModel)]="User.password"  name="password"  #password="ngModel" >
 
         @if (checkPasswordVisible) {
                 <mat-icon class="password-icon" (click)="showPassword()"> visibility
@@ -57,7 +57,7 @@
 
               <div class="button-Section">
 
-              <button> Anmelden</button>
+              <button type="submit"> Anmelden</button>
               
         </div>
 </form>
