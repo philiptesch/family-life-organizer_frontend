@@ -12,7 +12,7 @@
 
         <div>
         
-            <form #form="ngForm" class="example-form" (ngSubmit)="submitForm($event)">
+            <form #form="ngForm" class="example-form" (ngSubmit)="submitForm($event, form)">
             <div class="email-Area">
             <label class="form-label" for="name">Email-Adresse:</label>
            <div class="email-field">  

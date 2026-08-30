@@ -31,7 +31,9 @@ export class PartentLogin {
   }
 
 
-  submitForm(event: Event) {
+  submitForm(event: Event, form:any) {
+      console.log(form);
+    console.log(form.form.value.name);
     console.log(event);
     console.log(this.User);
     

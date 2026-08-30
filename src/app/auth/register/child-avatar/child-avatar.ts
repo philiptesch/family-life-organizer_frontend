@@ -17,7 +17,7 @@ export class ChildAvatar {
   };
 
   selectedAvatar: number | null = null;
-   imageSrc: string = '/assets/img/avatar_single_1.png';
+   imageSrc: string = '/assets/img/avatar_single_1_large.png';
   file:any;
 
 

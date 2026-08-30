@@ -57,26 +57,32 @@ section {
    >div {
     border-radius: 100%;
     background-color: gray;
-    height: 175px;
+    height: 190px;
+    position: relative;
+    width: 180px;
 
     .child-img {
-    border-radius: 100%;
-    width: 190px;   
+    border-radius: 42%;
+    width: 160px;
+    position: absolute;
+    left: 10px;
+    bottom: 0px;  
+    height: 185px;
     }
 
 
     .camera-img {
     width: 50px;
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     border-radius: 100%;
-    right: 130px;  
+    left: 125px; 
     }
    }
 }
 
 .child-query {
-margin-top: 20px;
+margin-top: 10px;
 
 .child-name {
     display: flex;
