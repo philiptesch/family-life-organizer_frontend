@@ -98,6 +98,9 @@ label {
  
 }
 
+
+
+
 }
 
 .child-name-area {
@@ -124,6 +127,24 @@ label {
 }
 
 
+}
+
+
+.child-new-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;   
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(233, 226, 226);
+    justify-content: center;
+    border: solid 1px black;
+
+    span {
+        font-weight: bolder;
+    }
+    
 }
 
 
@@ -230,7 +251,7 @@ label {
 
     .label-gender {     
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 5px;   
     }
 
@@ -240,7 +261,7 @@ label {
 .child-gender-query {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 15px;
+    margin-top: 5px;
 
 
     .gender-boy {
