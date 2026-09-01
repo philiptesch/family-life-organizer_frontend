@@ -137,12 +137,40 @@ section {
 }
 
 
+
+
+
 .changeHeightAndWidthstyling {
     width: auto !important;
     height: auto !important;
     position: static !important;
 }
 
+
+
+.skip-animation {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  gap: 10px;
+  justify-content: flex-start;
+  transform: translate(0, 0);
+  animation: none;
+}
+
+.skip-animation .logo-img {
+  width: 60px;
+  height: 60px;
+  animation: none;
+}
+
+.skip-animation .logo-img-headline h1 {
+  transform: translateX(0);
+  animation: none;
+  font-size: 20px;
+  margin-block-start: 0px;
+  margin-block-end: 5px;
+}
 
 
 

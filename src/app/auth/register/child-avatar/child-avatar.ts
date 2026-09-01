@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-child-avatar',
   imports: [CommonModule, MatIconModule],
@@ -16,6 +18,8 @@ export class ChildAvatar {
     password: ''
   };
 
+   private router = inject(Router);
+
   selectedAvatar: number | null = null;
    imageSrc: string = '/assets/img/avatar_single_1_large.png';
   file:any;
@@ -25,6 +29,12 @@ export class ChildAvatar {
     this.selectedAvatar = avatar;
 
     
+}
+
+
+navigateToLogin() {
+    this.router.navigate(['']);
+
 }
 
   onFileSelected(event: any): void {

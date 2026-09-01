@@ -10,7 +10,7 @@ import { Header } from '../../shared-components/header/header';
 
 @Component({
   selector: 'app-login',
-  imports: [CommonModule, Logo, MatIconModule, PartentLogin, ChildLogin, FormsModule, Header   ],
+  imports: [CommonModule, Logo, MatIconModule, PartentLogin, ChildLogin, FormsModule],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })
