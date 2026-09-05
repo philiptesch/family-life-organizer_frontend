@@ -27,6 +27,9 @@ export class ChildAvatar {
 
   selectAvatar(avatar: number) {
     this.selectedAvatar = avatar;
+    this.imageSrc = `/assets/img/avatar_single_${avatar}_large.png`
+
+
 
     
 }
