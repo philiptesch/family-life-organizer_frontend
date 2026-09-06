@@ -44,7 +44,7 @@ section {
 }
 
 .visiblity {
-    visibility: hidden;
+    display: none !important;
 }
 
 app-child-avatar {
@@ -66,8 +66,13 @@ app-header {
 }
 
 
+  .register-section {
 
+    @media (max-width: 500px) {
+     padding: 15px;
+    }
 
+  }
 
 
 form {

@@ -13,7 +13,10 @@ section {
 
       @media (max-width: 500px) {
         width: 100%;
+        height: 850px;
     }
+
+
 
 
     main {
@@ -23,6 +26,10 @@ section {
         .headline {
             display: flex;
             align-items: center;
+
+               @media (max-width: 500px) {
+                 align-items: flex-start;
+    }
         }
 
         header {
@@ -31,20 +38,30 @@ section {
         justify-content: center;
         align-items: center;
         width: 100%;
+       
 
 
         h1 {
         margin-block-start: 0;
-        margin-block-end: 0;
+        margin-block-end: 5px;
+
+         @media (max-width: 500px) {
+        font-size: 22px;
+    }
         }
 
         h6 {
         margin-block-start: 0;
         margin-block-end: 0;    
-        margin-top: 10px;
+        margin-top: 2px;
         font-size: 16px;
         color: gray;
         font-weight: bolder;
+
+
+          @media (max-width: 500px) {
+        text-align: center;
+    }
         }
     }
 }
@@ -58,6 +75,7 @@ section {
    margin-top: 15px;
    position: relative;
 
+    
 
    >div {
     border-radius: 100%;
@@ -66,6 +84,12 @@ section {
     position: relative;
     width: 180px;
 
+      @media (max-width: 500px) {
+        height: 160px;
+        width: 160px;
+    }
+
+
     .child-img {
     border-radius: 42%;
     width: 160px;
@@ -73,6 +97,14 @@ section {
     left: 10px;
     bottom: 0px;  
     height: 185px;
+
+
+     @media (max-width: 500px) {
+    width: 130px;
+    left: 15px;
+    height: 150px;
+    }
+
     }
 
 
@@ -101,6 +133,11 @@ label {
     font-weight: bolder;
     font-size: 20px;
     margin-left: 5px;
+
+    
+     @media (max-width: 500px) {
+    font-size: 16px;
+    }
  
 }
 
@@ -120,6 +157,7 @@ label {
 
 
     .child-name-field {   
+    width: 100%;    
     border: none;
     font-size: 20px;
     outline: none;
@@ -179,10 +217,12 @@ label {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    width: 120px;
+     width: 120px;
 
     @media (max-width: 500px) {
         width: 100%;
+        max-width: 80px;
+        flex-shrink: 0;
         gap: 10px;
     }
 
@@ -191,6 +231,10 @@ label {
     font-weight: bolder;
     font-size: 20px;
     margin-left: 5px;
+
+        @media (max-width: 500px) {
+    font-size: 16px;
+    }
  
 }
 
@@ -207,6 +251,7 @@ label {
 
 
     .child-age-field {   
+    width: 100%;
     border: none;
     font-size: 20px;
     outline: none;
@@ -229,12 +274,18 @@ label {
     justify-content: center;
     gap: 10px;
     flex: 1;
+      min-width: 0;
+    
 
 
 label {
     font-weight: bolder;
     font-size: 20px;
     margin-left: 5px;
+
+        @media (max-width: 500px) {
+    font-size: 16px;
+    }
  
 }
 
@@ -248,16 +299,21 @@ label {
     border-style: outset;
     border-radius: 10px;
     background-color: #f8f8f8;   
+    
 
 
-    .child-birth-field {   
+    .child-birth-field {  
+    width: 100%;
     border: none;
     font-size: 20px;
     outline: none;
     background: transparent;
     height: 100%;
     padding: 10px;
-    width: 100%;
+    
+    @media (max-width: 500px) {
+    width: 80%;
+    }
 
     }
 
@@ -273,7 +329,10 @@ label {
     font-weight: bolder;
     font-size: 18px;
     margin-left: 5px;   
-    }
+
+    @media (max-width: 500px) {
+    font-size: 16px;
+    }}
 
 }
 
