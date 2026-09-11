@@ -4,7 +4,7 @@
     <main>
 
         <div class="headline">
-         <mat-icon class="arrow" (click)="navigateToLogin()" > arrow_back</mat-icon>
+         <mat-icon class="arrow" (click)="emitEvent()" > arrow_back</mat-icon>
         <header>
             <h1> Kinder hinzufügen</h1>
             <h6> Ergänze die Informationen der Kinder </h6>
@@ -111,20 +111,10 @@
                     <img class="child-img"  src="/assets/img/avatar_single_2_small.png" alt="">
                      </div>
 
+
                     <div class="child-Image-field" [class.selected]="selectedAvatar === 3"
                     (click)="selectAvatar(3)">
                     <img class="child-img"  src="/assets/img/avatar_single_3_small.png" alt="">
-                    </div>
-
-                    <div class="child-Image-field" [class.selected]="selectedAvatar === 4"
-                    (click)="selectAvatar(4)">
-                    <img class="child-img"  src="/assets/img/avatar_single_4_small.png" alt="">
-                    </div>
-
-
-                    <div class="child-Image-field" [class.selected]="selectedAvatar === 5"
-                    (click)="selectAvatar(5)">
-                    <img class="child-img"  src="/assets/img/avatar_single_5_small.png" alt="">
                     </div>
 
 

@@ -14,7 +14,7 @@ import { ChildAvatar } from './child-avatar/child-avatar';
 export class Register {
 passwordIconVisible: boolean = false;
 passwordConfirmIconVisible: boolean = false;
-childAvatarPage: boolean = true
+childAvatarPage: boolean = false
 
 
 showPassword() {
@@ -30,9 +30,16 @@ showConfirmPassword() {
 
 
 showChildAvatar() {
-
-
 this.childAvatarPage = !this.childAvatarPage
+
+}
+
+
+showRegisterCard(event: boolean) {
+  this.childAvatarPage = event
+
+
+  
 
 }
 

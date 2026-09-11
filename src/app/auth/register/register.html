@@ -8,7 +8,7 @@
 
     <div class="register-section">
 
-      <app-child-avatar [ngClass]="{'showChildAvatar': childAvatarPage}"></app-child-avatar>
+      <app-child-avatar [ngClass]="{'showChildAvatar': childAvatarPage}" (returnToRegister)="showRegisterCard($event)"></app-child-avatar>
 
       <div [ngClass]="{'visiblity': childAvatarPage}" class="register-card">
 

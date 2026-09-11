@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -18,6 +18,8 @@ export class ChildAvatar {
     password: ''
   };
 
+  returnToRegister = output<boolean>()
+
    private router = inject(Router);
 
   selectedAvatar: number | null = null;
@@ -34,6 +36,11 @@ export class ChildAvatar {
     
 }
 
+ emitEvent() {
+    this.returnToRegister.emit(false)
+
+
+ }
 
 navigateToLogin() {
     this.router.navigate(['']);
