@@ -16,6 +16,8 @@ section {
         height: 740px;
     }
 
+   
+
 
 
 
@@ -23,6 +25,11 @@ section {
         width: 100%;
         padding: 20px 20px;
         box-sizing: border-box;
+
+
+        @media (max-width: 500px) {
+        padding: 15px 15px;
+    }
         .headline {
             display: flex;
             align-items: center;
@@ -30,6 +37,8 @@ section {
                @media (max-width: 500px) {
                  align-items: flex-start;
     }
+
+     
         }
 
         header {
@@ -38,7 +47,8 @@ section {
         justify-content: center;
         align-items: center;
         width: 100%;
-       
+        padding: 15px 15px;
+            
 
 
         h1 {
@@ -74,6 +84,11 @@ section {
    justify-content: center;
    margin-top: 15px;
    position: relative;
+
+
+      @media (max-width: 500px) {
+        margin-top: 5px;
+    }
 
     
 
@@ -121,6 +136,11 @@ section {
 
 .child-query {
 margin-top: 10px;
+
+
+     @media (max-width: 500px) {
+        margin-top: 5px;
+    }
 
 .child-name {
     display: flex;
@@ -440,6 +460,10 @@ width: 25px;
     gap: 5px;
     flex-wrap: wrap;
 
+    @media (max-width: 500px) {
+    flex-wrap: nowrap;
+    }
+
     .child-Image-field {
         width: 59px;
         height: 59px;
@@ -474,6 +498,10 @@ width: 25px;
     justify-content: center;
     margin-top: 20px;
 
+    @media (max-width: 400px) {
+    margin-top: 10px;
+    }
+
 
     button {
     position: relative;
@@ -488,6 +516,11 @@ width: 25px;
     font-size: 16px;
     cursor: pointer;
     transition: color 0.3s ease;    
+
+       @media (max-width: 400px) {
+        padding: 10px;
+    }
+
 
 
     &::before {
