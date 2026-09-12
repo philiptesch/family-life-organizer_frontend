@@ -6,7 +6,7 @@
 
  
 
-  <div  class="login-wrapper">
+  <div  class="login-wrapper"  [ngClass]="loginAnimation ? 'newLoginAnimation' : 'startAnimationBackground'" >
 
   <div class="parent_bg" [class.hidden]="isChildLoginActive"></div>
 

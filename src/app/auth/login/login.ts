@@ -17,12 +17,24 @@ import { Header } from '../../shared-components/header/header';
 export class Login implements OnInit {
 isKidMode = false;
 isChildLoginActive!: boolean
-  ngOnInit(): void {
+loginAnimation: boolean = false
 
-    AOS.init();
+
+  ngOnInit(): void {
+    this.checkStorage() 
+
+
   }
 
 
+  checkStorage() {
+    let animation = localStorage.getItem("logoAnimation") 
+    if (animation === 'true') {
+    this.loginAnimation = true;
+
+  }
+  
+}
 
 
 toggleMode() {

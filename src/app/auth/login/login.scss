@@ -11,8 +11,6 @@
     display: flex;
     justify-content: center;
     position: relative;
-      opacity: 0;
-     animation: fadeInImage 600ms ease-out 3s normal forwards;
     @media (max-width: 760px) {
 
     }
@@ -23,6 +21,14 @@
    animation: fadeInImage 600ms ease-out 3s normal forwards;
     opacity: 0;
 }
+
+
+.newLoginAnimation  {
+   animation: fadeInImage 600ms ease-out 1s normal forwards;
+    opacity: 0; 
+}
+
+
 
 .child_bg {
   opacity: 0;
@@ -84,6 +90,15 @@ section {
     margin-top: 30px;
     margin-bottom: 120px;
     position: relative;
+
+
+    @media (max-width: 500px) {
+    margin-top: 0; 
+    margin-bottom: 0;
+    }
+  
+  
+  
   }
 }
 
@@ -207,6 +222,13 @@ input:checked + .slider .child { opacity: 1; }
   position: absolute;
   top: 125px;
 
+
+      @media (max-width: 500px) {
+      display: none;
+
+}
+  
+  
   .speech-bubble-content {
     position: relative;
 

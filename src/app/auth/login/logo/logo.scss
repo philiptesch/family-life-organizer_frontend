@@ -156,6 +156,17 @@ section {
   justify-content: flex-start;
   transform: translate(0, 0);
   animation: none;
+
+
+    @media (max-width: 500px) {
+    top: 50px;
+    left: 35px; 
+    width: 80%;
+    justify-content: center;
+    }
+
+
+
 }
 
 .skip-animation .logo-img {
