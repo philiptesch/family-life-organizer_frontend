@@ -89,16 +89,29 @@ section {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 120px;
+    margin-bottom: 195px;
     position: relative;
 
 
+ 
+
+      @media (max-width: 1300px){
+        margin-top: 50px;
+        justify-content: flex-end;
+        margin-bottom: 50px;
+
+      }
+
     @media (max-width: 600px) {
-    margin-top: 0; 
-    margin-bottom: 0;
+      margin-top: 70px;
+      margin-bottom: 0;
     }
 
+
+      @media (max-width: 500px) {
+      margin-top: 35px;
+      margin-bottom: 0;
+    }
 
     @media (max-width: 1300px) and (max-height: 900px)  {
     margin-bottom: 0;
@@ -228,8 +241,19 @@ input:checked + .slider .child { opacity: 1; }
 
 .child-info-content {
   position: absolute;
-  top: 125px;
+  top: 100px;
 
+
+       @media (max-width: 1300px) {
+        top: 95px;
+
+       }
+
+
+      @media (max-width: 500px) {
+      display: none;
+
+}
 
       @media (max-width: 500px) {
       display: none;
@@ -295,15 +319,26 @@ input:checked + .slider .child { opacity: 1; }
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     z-index: 10; 
     flex: 1;
-    margin-top: 50px;
+    margin-top: 30px;
 
 
+
+   @media (max-width: 1300px){
+    margin-top: 120px;
+
+}
     
-   @media (max-width: 400px){
-  justify-content: center !important;
+   @media (max-width: 900px){
+  justify-content: center;
+
+}
+
+
+  @media (max-width: 600px){
+  margin-top: 50px;
 
 }
 
@@ -311,18 +346,16 @@ input:checked + .slider .child { opacity: 1; }
 
     @media (max-width: 900px) and (max-height: 1350px)  {
     justify-content: flex-start;
-    margin-top: 110px;
+    margin-top: 120px;
 
 }
-
-
-    @media (max-width: 900px) and (max-height: 1050px)  {
+    @media (max-width: 600px) and (max-height: 1350px)  {
     justify-content: flex-start;
-    margin-top: 110px;
+    margin-top: 140px;
 
 }
 
-
+ 
    @media (max-width: 450px) and (max-height: 920px)  {
     justify-content: flex-start;
     margin-top: 150px;
