@@ -166,7 +166,10 @@ section {
     align-items: flex-start;
     }
 
-
+    @media (max-width: 450px) {
+    left: 0;
+    top: 0;
+    }
 
 }
 

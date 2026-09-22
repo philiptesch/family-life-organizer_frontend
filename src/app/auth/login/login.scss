@@ -113,6 +113,13 @@ section {
       margin-bottom: 0;
     }
 
+    @media (max-width: 400px) {
+    transform: translateY(120px);
+    justify-content: center;
+    margin-top: 10px;
+    }
+
+
     @media (max-width: 1300px) and (max-height: 900px)  {
     margin-bottom: 0;
 
@@ -342,6 +349,10 @@ input:checked + .slider .child { opacity: 1; }
 
 }
 
+  @media (max-width: 450px){
+  margin-top: 0;
+
+}
 
 
     @media (max-width: 900px) and (max-height: 1350px)  {
