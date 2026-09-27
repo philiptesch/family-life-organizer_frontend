@@ -1,59 +1,100 @@
-# FamilyLifeOrganizer
+👨‍👩‍👧‍👦 Family Organizer
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
+Ein digitaler Familien-Organizer, mit dem sich Termine, Aufgaben, Einkäufe und wichtige Informationen der ganzen Familie zentral verwalten lassen.
 
-## Development server
+🚀 Funktionen
 
-To start a local development server, run:
+📊 Dashboard
 
-```bash
-ng serve
-```
+- Übersicht über aktuelle Termine
+- Offene Aufgaben
+- Einkaufsliste
+- Anstehende Geburtstage
+- Wichtige Hinweise
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+👨‍👩‍👧‍👦 Familienmitglieder
 
-## Code scaffolding
+- Familienmitglieder hinzufügen
+- Name und Profilbild
+- Individuelle Aufgaben und Termine zuweisen
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+📅 Kalender
 
-```bash
-ng generate component component-name
-```
+- Termine erstellen
+- Datum und Uhrzeit festlegen
+- Familienmitglied zuweisen
+- Geburtstage verwalten
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+✅ Aufgaben
 
-```bash
-ng generate --help
-```
+- Aufgaben erstellen
+- Aufgaben einem Familienmitglied zuweisen
+- Aufgaben als erledigt markieren
+- Offene und erledigte Aufgaben anzeigen
 
-## Building
+🛒 Einkaufsliste
 
-To build the project run:
+- Artikel hinzufügen
+- Artikel abhaken
+- Erledigte Artikel entfernen
+- Gemeinsame Liste für die gesamte Familie
 
-```bash
-ng build
-```
+📝 Notizen
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Gemeinsame Notizen erstellen
+- Wichtige Informationen speichern
+- Notizen bearbeiten und löschen
 
-## Running unit tests
+🛠️ Technologien
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Geplant:
 
-```bash
-ng test
-```
+- HTML
+- CSS
+- JavaScript
+- Firebase
+- Firebase Realtime Database
 
-## Running end-to-end tests
+📁 Projektstruktur
 
-For end-to-end (e2e) testing, run:
+family-organizer/
+│
+├── index.html
+├── dashboard.html
+├── calendar.html
+├── tasks.html
+├── shopping-list.html
+├── notes.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   ├── app.js
+│   ├── calendar.js
+│   ├── tasks.js
+│   ├── shopping-list.js
+│   └── notes.js
+│
+└── assets/
+    ├── images/
+    └── icons/
 
-```bash
-ng e2e
-```
+🎯 Ziel
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Der Family Organizer soll eine einfache zentrale Plattform für den Familienalltag werden.
 
-## Additional Resources
+Statt verschiedene Apps für Kalender, Aufgaben und Einkaufslisten zu verwenden, sollen alle wichtigen Informationen an einem Ort verfügbar sein.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🔮 Geplante Erweiterungen
+
+- 🔔 Push-Benachrichtigungen
+- 🔐 Login für Familienmitglieder
+- 📱 Optimierung für Smartphones
+- 🔄 Echtzeit-Synchronisierung
+- 💰 Familienbudget
+- 🍽️ Essensplanung
+- 🧹 Haushaltsplan
+- 🎂 Geburtstagsübersicht
+- 📷 Gemeinsame Familienfotos
+- 🌤️ Wetter auf dem Dashboard
