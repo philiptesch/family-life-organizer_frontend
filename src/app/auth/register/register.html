@@ -24,7 +24,7 @@
 
         <div class="register-form">
 
-          <form class="example-form">
+          <form class="example-form" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
 
 
 
@@ -38,7 +38,8 @@
                 <input
                   id="name"
                   type="text"
-                  placeholder="Familien-Name">
+                  placeholder="Familien-Name" formControlName="familyName" >
+               
               </div>
             </div>
 
@@ -53,7 +54,7 @@
                 <input
                   id="email"
                   type="email"
-                  placeholder="Ex. pat@example.com">
+                  placeholder="Ex. pat@example.com" formControlName="email" >
               </div>
               <span class="validation-text"> Achtung Email ist falsch oder existiert Bereits</span>
             </div>
@@ -67,7 +68,8 @@
                 <input
                   id="password"
                   [type]="passwordIconVisible ? 'text' : 'password'"  placeholder="Password"
-                  placeholder="Mindestens 8 Zeichen">
+                  placeholder="Mindestens 8 Zeichen" formControlName="password">
+                  
 
               @if (passwordIconVisible) {
                 <mat-icon class="password-icon" (click)="showPassword()"> visibility
@@ -89,7 +91,7 @@
                 <input
                   id="password"
                   [type]="passwordConfirmIconVisible ? 'text' : 'password'"  placeholder="Password"
-                  placeholder="Password wiederholen">
+                  placeholder="Password wiederholen" formControlName="confirmPassword">
                   @if (passwordConfirmIconVisible) {
                 <mat-icon class="password-icon" (click)="showConfirmPassword()"> visibility
                 </mat-icon>}@else {

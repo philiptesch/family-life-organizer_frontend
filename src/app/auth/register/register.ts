@@ -5,9 +5,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import { ChildAvatar } from './child-avatar/child-avatar';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { User } from '../../interfaces/user';
+import { Child } from '../../interfaces/child';
+
 @Component({
   selector: 'app-register',
-  imports: [Header, CommonModule, MatIconModule, ChildAvatar],
+  imports: [Header, CommonModule, MatIconModule, ChildAvatar,FormsModule, ReactiveFormsModule],
   templateUrl: './register.html',
   styleUrl: './register.scss',
 })
@@ -15,6 +19,15 @@ export class Register {
 passwordIconVisible: boolean = false;
 passwordConfirmIconVisible: boolean = false;
 childAvatarPage: boolean = false
+
+signUpForm  = new FormGroup({ 
+  id: new FormControl(''),
+  familyName: new FormControl(''),
+  email: new FormControl(''),
+  passsword: new FormControl(''),
+  confirmPassword: new FormControl(''),
+ childs: new FormControl<Child[]>([])
+})
 
 
 showPassword() {
@@ -41,6 +54,10 @@ showRegisterCard(event: boolean) {
 
   
 
+}
+
+onSubmit() {
+    console.log(this.signUpForm.value)
 }
 
 }
