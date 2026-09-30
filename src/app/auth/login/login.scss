@@ -185,6 +185,13 @@ app-partent-login {
 app-child-login {
   display: flex;
 
+
+     @media (max-width: 600px) {
+      padding: 15px;
+    
+
+       }
+
 }
 
 .slider:before {
