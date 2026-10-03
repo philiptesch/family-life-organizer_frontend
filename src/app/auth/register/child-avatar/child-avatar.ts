@@ -1,13 +1,14 @@
-import { Component, inject, output } from '@angular/core';
+import { Component, inject, output , Output,EventEmitter} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {Router} from '@angular/router';
-
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { Child } from '../../../interfaces/child';
 @Component({
   selector: 'app-child-avatar',
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, MatIconModule, ReactiveFormsModule, FormsModule],
   templateUrl: './child-avatar.html',
   styleUrl: './child-avatar.scss',
 })
@@ -18,7 +19,18 @@ export class ChildAvatar {
     password: ''
   };
 
+
+  child: Child = {
+  id : "",
+  name: "",
+  age: "",
+  birthdate: "",
+  gender: "",
+  image: ""
+  }
+
   returnToRegister = output<boolean>()
+  @Output() childIsActive = new EventEmitter();
 
    private router = inject(Router);
 
@@ -59,6 +71,8 @@ navigateToLogin() {
 
 }
 
+
+
   }
 
 
@@ -72,8 +86,13 @@ navigateToLogin() {
 
 
 
-  }
 
+    
+  }
+  
+    onSubmit(event:Event, form: any) {
+
+}
   
 }
 
