@@ -59,7 +59,7 @@
                 <label for=""> Geburtsdatum</label>
 
                 <div class="child-birth-area">
-                    <input class="child-birth-field" name="birthdate"  type="date" min="2018-12-31" placeholder="Geburtsdatum" [(ngModel)]="child.birthdate" #birthdate="ngModel">
+                    <input class="child-birth-field" name="birthdate" id="datepicker"  type="date" min="2018-12-31" placeholder="Geburtsdatum" [(ngModel)]="child.birthdate" #birthdate="ngModel">
 
                 </div>
             </div> 
@@ -76,13 +76,13 @@
                 <div class="child-gender-query">
 
                 <div class="gender-boy">
-                <input type="radio" name="gender" id="boy" [(ngModel)]="child.gender" #gender="ngModel" name="gender">
-                <label for=""> Junge</label> 
+                <input type="radio" name="gender" id="boy" [(ngModel)]="child.gender" #gender="ngModel"  value="boy" name="gender">
+                <label for="boy"> Junge</label> 
                  </div>   
                  
                 <div class="gender-girl">
-                <input type="radio" name="gender" id="girl"[(ngModel)]="child.gender" #gender="ngModel" name="gender" >
-                <label for=""> Mädchen</label> 
+                <input type="radio" name="gender" id="girl"[(ngModel)]="child.gender" #gender="ngModel"   value="girl" name="gender">
+                <label for="girl"> Mädchen</label> 
                 </div>   
                 </div>    
                 

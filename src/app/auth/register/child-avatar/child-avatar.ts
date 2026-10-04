@@ -4,7 +4,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {Router} from '@angular/router';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule,   } from '@angular/forms';
 import { Child } from '../../../interfaces/child';
 @Component({
   selector: 'app-child-avatar',
@@ -90,7 +90,32 @@ navigateToLogin() {
     
   }
   
-    onSubmit(event:Event, form: any) {
+    onSubmit(event:Event, ng: NgForm) {
+
+
+      console.log(ng.value);
+      console.log(this.child);
+      this.checkBirthdatAllowed(this.child.birthdate)
+
+
+      ng.resetForm();
+      
+      
+
+}
+
+
+checkBirthdatAllowed(birthdate: string) {
+  const birthDate = new Date(birthdate).getFullYear()
+  console.log(birthdate);
+  var now = new Date().getFullYear();
+  let age = now - birthDate;
+
+    if (age >= 5) {
+    console.log("Kind ist mindestens 5 Jahre alt");
+  } else {
+    console.log("Kind ist jünger als 5 Jahre");
+  }
 
 }
   
