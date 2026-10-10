@@ -80,8 +80,12 @@ form {
     flex-direction: column;
     gap: 15px;
 
-         @media (max-width: 400px) {
+         @media (max-width: 800px) {
         gap: 10px;
+         }
+
+           @media (max-width: 500px) {
+        gap: 0
          }
 }
 

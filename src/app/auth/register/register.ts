@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output, input  } from '@angular/core';
 import { Header } from '../../shared-components/header/header';
 import { CommonModule } from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
@@ -20,13 +20,16 @@ passwordIconVisible: boolean = false;
 passwordConfirmIconVisible: boolean = false;
 childAvatarPage: boolean = false
 
+parentData!: User
+ValueRegisterChildInfoIsEmpty: boolean = false
+
 signUpForm  = new FormGroup({ 
-  id: new FormControl(''),
-  familyName: new FormControl(''),
-  email: new FormControl(''),
-  passsword: new FormControl(''),
-  confirmPassword: new FormControl(''),
- childs: new FormControl<Child[]>([])
+  id: new FormControl<string | null>(null),
+  familyName: new FormControl('', { nonNullable: true }),
+  email: new FormControl('', { nonNullable: true }),
+  passsword: new FormControl('', { nonNullable: true }),
+  confirmPassword: new FormControl('', { nonNullable: true }),
+ childs: new FormControl<Child[]>([], { nonNullable: true })
 })
 
 
@@ -43,6 +46,8 @@ showConfirmPassword() {
 
 
 showChildAvatar() {
+this.parentData = this.signUpForm.getRawValue();
+
 this.childAvatarPage = !this.childAvatarPage
 
 }
@@ -57,7 +62,20 @@ showRegisterCard(event: boolean) {
 }
 
 onSubmit() {
-    console.log(this.signUpForm.value)
+    console.log(this.signUpForm.value);
+
+    this.checkChildsInfo(this.signUpForm.value.childs!);
+}
+
+checkChildsInfo(childInfo: Child[]) {
+
+  if(childInfo.length === 0) {
+    this.ValueRegisterChildInfoIsEmpty = true
+    console.log(this.ValueRegisterChildInfoIsEmpty);
+    
+  }
+
+
 }
 
 }

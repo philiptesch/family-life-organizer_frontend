@@ -1,4 +1,4 @@
-import { Component, inject, output , Output,EventEmitter} from '@angular/core';
+import { Component, inject, output , Output,EventEmitter, input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -6,6 +6,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {Router} from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule,   } from '@angular/forms';
 import { Child } from '../../../interfaces/child';
+import { User } from '../../../interfaces/user';
 @Component({
   selector: 'app-child-avatar',
   imports: [CommonModule, MatIconModule, ReactiveFormsModule, FormsModule],
@@ -28,6 +29,9 @@ export class ChildAvatar {
   gender: "",
   image: ""
   }
+
+  parent = input<User>()
+
 
   returnToRegister = output<boolean>()
   @Output() childIsActive = new EventEmitter();
@@ -95,6 +99,8 @@ navigateToLogin() {
 
       console.log(ng.value);
       console.log(this.child);
+      console.log("PaRENT", this.parent);
+      
       this.checkBirthdatAllowed(this.child.birthdate)
 
 
