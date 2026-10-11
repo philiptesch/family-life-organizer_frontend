@@ -8,7 +8,11 @@
 
     <div class="register-section">
 
-      <app-child-avatar [ngClass]="{'showChildAvatar': childAvatarPage}" (returnToRegister)="showRegisterCard($event)" [parent]="parentData">  </app-child-avatar>
+      <app-child-avatar [ngClass]="{'showChildAvatar': childAvatarPage}" (returnToRegister)="showRegisterCard($event)" [parent]="parentData"
+      (childData)="receivedChildData($event)">
+        
+      
+      </app-child-avatar>
 
       <div [ngClass]="{'visiblity': childAvatarPage}" class="register-card">
 
@@ -141,7 +145,7 @@
             </div>
 
               @if (ValueRegisterChildInfoIsEmpty) {
-              <span class="validation-text"> du musst noch deine Kinder hinzufügen  ></span>
+              <span class="validation-text"> du musst noch deine Kinder hinzufügen </span>
              }
                  <div class="btn-section">
 

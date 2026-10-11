@@ -78,4 +78,12 @@ checkChildsInfo(childInfo: Child[]) {
 
 }
 
+receivedChildData(event: Child) {
+console.log("tester",event);
+
+}
+
+
+
+
 }
