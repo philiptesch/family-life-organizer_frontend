@@ -133,7 +133,13 @@
                 </div>
 
                 <div class="childsNumber">
-                  <span> 2 Kinder hinzugefügt</span>
+                  @if (childData.length < 0 ) {
+                    <span style="color: red; font-size: 30px"> {{childData.length}} </span> 
+                  } @else { 
+                    <span> keine Kinder </span> 
+                  }
+
+                   <span> Kinder hinzugefügt</span>
 
                 </div>
 

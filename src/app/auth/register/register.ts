@@ -19,6 +19,7 @@ export class Register {
 passwordIconVisible: boolean = false;
 passwordConfirmIconVisible: boolean = false;
 childAvatarPage: boolean = false
+childData: Child[] = [] 
 
 parentData!: User
 ValueRegisterChildInfoIsEmpty: boolean = false
@@ -31,6 +32,15 @@ signUpForm  = new FormGroup({
   confirmPassword: new FormControl('', { nonNullable: true }),
  childs: new FormControl<Child[]>([], { nonNullable: true })
 })
+
+
+
+ngOnInit(): void {
+console.log('childData', this.childData.length );
+  
+}
+
+
 
 
 showPassword() {
@@ -80,6 +90,10 @@ checkChildsInfo(childInfo: Child[]) {
 
 receivedChildData(event: Child) {
 console.log("tester",event);
+this.signUpForm.value.childs?.push(event)
+this.childData = this.signUpForm.value.childs! 
+console.log('this.childData ', this.childData, "Kinder: ", this.childData.length );
+
 
 }
 
