@@ -5,7 +5,7 @@ export interface User {
   id: string | null;
   familyName: string;
   email: string;
-  passsword: string;
+  password: string;
   confirmPassword: string;
   childs: Child[]
 }

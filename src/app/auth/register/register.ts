@@ -1,11 +1,9 @@
-import { Component, output, input  } from '@angular/core';
+import { Component} from '@angular/core';
 import { Header } from '../../shared-components/header/header';
 import { CommonModule } from '@angular/common';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import { ChildAvatar } from './child-avatar/child-avatar';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { User } from '../../interfaces/user';
 import { Child } from '../../interfaces/child';
 
@@ -28,7 +26,7 @@ signUpForm  = new FormGroup({
   id: new FormControl<string | null>(null),
   familyName: new FormControl('', { nonNullable: true }),
   email: new FormControl('', { nonNullable: true }),
-  passsword: new FormControl('', { nonNullable: true }),
+  password: new FormControl('', { nonNullable: true }),
   confirmPassword: new FormControl('', { nonNullable: true }),
  childs: new FormControl<Child[]>([], { nonNullable: true })
 })
