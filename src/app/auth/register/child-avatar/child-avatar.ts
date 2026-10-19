@@ -36,6 +36,7 @@ export class ChildAvatar {
   returnToRegister = output<boolean>()
   @Output() childIsActive = new EventEmitter();
   childData = output<Child>();
+  newChildHasBeenAdded: boolean = false
 
    private router = inject(Router);
 
@@ -103,9 +104,14 @@ navigateToLogin() {
       console.log("PaRENT", this.parent);
       
       this.checkBirthdatAllowed(this.child.birthdate)
-
+      this.newChildHasBeenAdded =true
+    
+      setTimeout(() => {
       this.childInfoToRegister(this.child)
+      this.newChildHasBeenAdded =false
       ng.resetForm();
+      this.emitEvent()
+      }, 2000);
       
       
 

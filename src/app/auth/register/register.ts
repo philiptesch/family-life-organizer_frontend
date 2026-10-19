@@ -3,13 +3,14 @@ import { Header } from '../../shared-components/header/header';
 import { CommonModule } from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
 import { ChildAvatar } from './child-avatar/child-avatar';
+import { ChildList } from './child-list/child-list';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { User } from '../../interfaces/user';
 import { Child } from '../../interfaces/child';
 
 @Component({
   selector: 'app-register',
-  imports: [Header, CommonModule, MatIconModule, ChildAvatar,FormsModule, ReactiveFormsModule],
+  imports: [Header, CommonModule, MatIconModule, ChildAvatar, ChildList, FormsModule, ReactiveFormsModule],
   templateUrl: './register.html',
   styleUrl: './register.scss',
 })
