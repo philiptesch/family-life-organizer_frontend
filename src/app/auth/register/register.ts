@@ -17,7 +17,7 @@ import { Child } from '../../interfaces/child';
 export class Register {
 passwordIconVisible: boolean = false;
 passwordConfirmIconVisible: boolean = false;
-childAvatarPage: boolean = false
+number: number = 1
 childData: Child[] = [] 
 
 parentData!: User
@@ -35,7 +35,7 @@ signUpForm  = new FormGroup({
 
 
 ngOnInit(): void {
-console.log('childData', this.childData.length );
+console.log('childData', this.childData.length, this.number );
   
 }
 
@@ -57,13 +57,23 @@ showConfirmPassword() {
 showChildAvatar() {
 this.parentData = this.signUpForm.getRawValue();
 
-this.childAvatarPage = !this.childAvatarPage
+this.number = 2
 
 }
 
 
-showRegisterCard(event: boolean) {
-  this.childAvatarPage = event
+showRegisterCard(event: number) {
+  this.number = event
+
+
+  
+
+}
+
+
+
+showRegisterCardFromChildList(event: number) {
+  this.number = event
 
 
   

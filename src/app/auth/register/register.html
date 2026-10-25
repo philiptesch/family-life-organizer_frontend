@@ -4,18 +4,20 @@
     <app-header></app-header>
   </header>
 
-  <section [ngClass]="{'hiddescrollBar': childAvatarPage}" >
+  <section [ngClass]="{'hiddescrollBar': number === 2}" >
 
     <div class="register-section">
 
-      <app-child-list></app-child-list>
-      <app-child-avatar [ngClass]="{'showChildAvatar': childAvatarPage}" (returnToRegister)="showRegisterCard($event)" [parent]="parentData"
+      <app-child-list [ngClass]="{'showChildListAvatar': number === 3}"></app-child-list>
+      <app-child-avatar [ngClass]="{'showChildAvatar': number === 2}" (returnToRegister)="showRegisterCard($event)"  
+      (returnToRegister)="showRegisterCardFromChildList($event)"
+      [parent]="parentData"
       (childData)="receivedChildData($event)">
         
       
       </app-child-avatar>
 
-      <div [ngClass]="{'visiblity': !childAvatarPage}" class="register-card">
+      <div [ngClass]="{'visiblity': number === 2 || number === 3}" class="register-card">
 
         <div class="register-card-headline">
          <div class="headline">

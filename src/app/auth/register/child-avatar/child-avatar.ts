@@ -33,7 +33,7 @@ export class ChildAvatar {
   parent = input<User>()
 
 
-  returnToRegister = output<boolean>()
+  returnToRegister = output<number>()
   @Output() childIsActive = new EventEmitter();
   childData = output<Child>();
   newChildHasBeenAdded: boolean = false
@@ -55,7 +55,7 @@ export class ChildAvatar {
 }
 
  emitEvent() {
-    this.returnToRegister.emit(false)
+    this.returnToRegister.emit(1)
 
 
  }

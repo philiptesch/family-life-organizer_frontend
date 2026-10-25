@@ -1,5 +1,5 @@
 .child-list-card {
-    width: 470px;
+    width: 520px;
       background-color: #E8EEFA;
     display: flex;
     border-radius: 30px;
@@ -21,6 +21,7 @@
 
 .arrow {
 margin-top: 15px;
+cursor: pointer;
 }
 
 
@@ -86,21 +87,22 @@ flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 50px;
     padding-left: 15px;    
 }
 
 
 .childAvatarChange {
     display: flex;
+    align-items: center;
     gap: 8px;
 }
 
 
 .editIcon {
-background-color: #c1c1c1;
-padding: 5px;
+background-color: #fdb3fd;
+padding: 8px;
 border-radius: 10px;    
+cursor: pointer;
 
 .edit {
     color: #8C1AF6 !important ;
@@ -111,11 +113,16 @@ border-radius: 10px;
 
 .deleteIcon {
 background-color: #c1c1c1;
-padding: 5px;
+padding: 8px;
 border-radius: 10px;    
+cursor: pointer;
 
 
 .delete {
     color: black !important ;
 }
+}
+
+.arrowright {
+cursor: pointer;
 }

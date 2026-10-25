@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 @Component({
@@ -8,5 +8,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './child-list.scss',
 })
 export class ChildList {
+  returnToRegister = output<number>()
+
+
+  goToRegister() {
+  this.returnToRegister.emit(1)
+  }
 
 }

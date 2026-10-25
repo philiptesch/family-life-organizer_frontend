@@ -43,6 +43,11 @@ section {
     display: block !important; 
 }
 
+.showChildListAvatar{
+    display: block !important; 
+}
+
+
 .visiblity {
     display: none !important;
 }
@@ -50,6 +55,13 @@ section {
 app-child-avatar {
     display: none;
 }
+
+
+
+app-child-list {
+    display: none;
+}
+
 
 .hiddescrollBar {
   overflow: hidden;
