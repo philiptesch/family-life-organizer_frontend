@@ -8,9 +8,9 @@
 
     <div class="register-section">
 
-      <app-child-list [ngClass]="{'showChildListAvatar': number === 3}"></app-child-list>
+      <app-child-list [ngClass]="{'showChildListAvatar': number === 3}" (returnToRegister)="showRegisterCardFromChildList($event)"></app-child-list>
       <app-child-avatar [ngClass]="{'showChildAvatar': number === 2}" (returnToRegister)="showRegisterCard($event)"  
-      (returnToRegister)="showRegisterCardFromChildList($event)"
+      
       [parent]="parentData"
       (childData)="receivedChildData($event)">
         
@@ -137,9 +137,9 @@
 
                 <div class="childsNumber">
                   @if (childData.length > 0 ) {
-                    <span >{{childData.length}} </span> 
+                    <span (click)="showChildAvatarList()" >{{childData.length}} </span> 
                   } @else { 
-                    <span> 0 </span> 
+                    <span (click)="showChildAvatarList()"> 0 </span> 
                   }
 
                    <span> Kind hinzugefügt</span>

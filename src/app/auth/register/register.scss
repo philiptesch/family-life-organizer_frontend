@@ -474,6 +474,12 @@ padding: 10px;
         >span {
         color: #434141;
         font-weight: bolder;
+        cursor: pointer;
+
+
+        &:hover {
+          text-decoration: underline;
+        }
         }
     }
 

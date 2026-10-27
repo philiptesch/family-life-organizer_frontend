@@ -71,12 +71,15 @@ showRegisterCard(event: number) {
 }
 
 
+showChildAvatarList() {
+  this.number = 3
+}
+
 
 showRegisterCardFromChildList(event: number) {
   this.number = event
 
 
-  
 
 }
 
