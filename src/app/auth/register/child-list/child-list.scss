@@ -127,3 +127,54 @@ cursor: pointer;
 .arrowright {
 cursor: pointer;
 }
+
+.addnewAvatarSection {
+
+
+    .newChild {
+    border: dashed 1px #8C1AF6 ;
+    padding: 5px;
+    border-radius: 20px;
+
+        .btn-section{
+        padding: 10px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+
+
+            button {
+              width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background-color: #cbbfbf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+
+                .addIcon {
+                font-size: 35px;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            color: #8C1AF6;
+            font-weight: bolder;
+                }
+
+
+             
+
+            }
+               .addChildSpanText {
+                font-size: 20px;
+                font-weight: bold; 
+                color: #8C1AF6;
+                }
+        }
+
+    }
+
+}
