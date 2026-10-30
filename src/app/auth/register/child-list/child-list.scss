@@ -78,6 +78,12 @@ img {
 .childInfo {
 display: flex;
 flex-direction: column;    
+
+
+span:nth-child(1) {
+    font-weight: bolder;
+    font-size: 18px;
+}
 }
 
 }
@@ -168,11 +174,34 @@ cursor: pointer;
              
 
             }
+
+
+            .btn-section-Text {
+                display: flex;
+                flex-direction: column ;
+                gap: 10px;
+
+
                .addChildSpanText {
                 font-size: 20px;
-                font-weight: bold; 
+                font-weight: bold;                                                           
                 color: #8C1AF6;
                 }
+
+                span:nth-child(2) {
+                font-weight: 700;
+                font-size: 14px;
+                color: #979191;
+                }
+
+            
+
+            }
+
+            img {
+                width: 60px;
+                margin-left: 20px;
+            }
         }
 
     }
