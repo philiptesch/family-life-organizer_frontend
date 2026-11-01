@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, inject, effect} from '@angular/core';
 import { Header } from '../../shared-components/header/header';
 import { CommonModule } from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
@@ -7,6 +7,7 @@ import { ChildList } from './child-list/child-list';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { User } from '../../interfaces/user';
 import { Child } from '../../interfaces/child';
+import { ChildService } from '../../services/ChildService';
 
 @Component({
   selector: 'app-register',
@@ -15,10 +16,13 @@ import { Child } from '../../interfaces/child';
   styleUrl: './register.scss',
 })
 export class Register {
+
+public ChildService = inject(ChildService);  
 passwordIconVisible: boolean = false;
 passwordConfirmIconVisible: boolean = false;
-number: number = 1
+registerSiteNumber: number =1;
 childData: Child[] = [] 
+
 
 parentData!: User
 ValueRegisterChildInfoIsEmpty: boolean = false
@@ -35,10 +39,20 @@ signUpForm  = new FormGroup({
 
 
 ngOnInit(): void {
-console.log('childData', this.childData.length, this.number );
+console.log('childData', this.childData.length);
   
 }
 
+
+constructor() {
+    effect(() => {
+
+    console.log(
+      'Kinderliste wurde geändert:',
+      this.registerSiteNumber = this.ChildService.registerSite()
+    );
+      });
+}
 
 
 
@@ -57,13 +71,13 @@ showConfirmPassword() {
 showChildAvatar() {
 this.parentData = this.signUpForm.getRawValue();
 
-this.number = 2
+this.ChildService.ChangeRegisterSite(2)
 
 }
 
 
 showRegisterCard(event: number) {
-  this.number = event
+  this.ChildService.ChangeRegisterSite(event)
 
 
   
@@ -72,12 +86,12 @@ showRegisterCard(event: number) {
 
 
 showChildAvatarList() {
-  this.number = 3
+  this.ChildService.ChangeRegisterSite(3)
 }
 
 
 showRegisterCardFromChildList(event: number) {
-  this.number = event
+   this.ChildService.ChangeRegisterSite(event)
 
 
 
