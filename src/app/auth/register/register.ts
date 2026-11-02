@@ -27,6 +27,7 @@ childData: Child[] = []
 parentData!: User
 ValueRegisterChildInfoIsEmpty: boolean = false
 
+
 signUpForm  = new FormGroup({ 
   id: new FormControl<string | null>(null),
   familyName: new FormControl('', { nonNullable: true }),
@@ -118,10 +119,26 @@ receivedChildData(event: Child) {
 console.log("tester",event);
 this.signUpForm.value.childs?.push(event)
 this.childData = this.signUpForm.value.childs! 
-console.log('this.childData ', this.childData, "Kinder: ", this.childData.length );
+console.log('this.childData ', this.childData, "Kinder: ", this.childData.length, this.childData[0].name );
 
 
 }
+
+
+childFormGroup(child: Child) {
+  return new FormGroup({
+    name: new FormControl(child.name),
+    age: new FormControl(child.age),
+    gender: new FormControl(child.gender),
+    birthdate: new FormControl(child.birthdate),
+    image: new FormControl(child.image),
+    id: new FormControl(child.id)
+  });
+}
+
+
+
+
 
 
 
