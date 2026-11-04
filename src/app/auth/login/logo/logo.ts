@@ -12,6 +12,7 @@ export class Logo implements OnInit  {
 changeHeightAndWidth: boolean = false
 isChildActive = input<boolean>(false);
 logoAnimation: boolean = false
+isChildLoginActive!: boolean
 
 constructor() {
 //    this.readLoginCondition()
@@ -56,6 +57,11 @@ checkStorage() {
 
 
 }
+
+}
+
+toggleMode() {
+  this.isChildLoginActive =! this.isChildLoginActive
 
 }
 }

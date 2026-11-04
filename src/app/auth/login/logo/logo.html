@@ -1,34 +1,34 @@
-
 <main [ngClass]="{'changeHeightAndWidthstyling' : changeHeightAndWidth}" class="main-page">
-<div   class="logo-section"   [class.skip-animation]="logoAnimation">
-    <section>
-<img  class="logo-img" src="\assets\img\icon_home.png" alt="" >
-<div class="logo-img-headline" >
-
-<h1 class="logo-img-headline-first"> Family Life</h1>  <h1 class="logo-img-headline-second"> Organizer</h1>
+    <div class="logo-section" [class.skip-animation]="logoAnimation">
+        <section>
+            <img class="logo-img" src="\assets\img\icon_home.png" alt="">
+            <div class="logo-img-headline">
 
 
-</div>
-</section>
-    <div class="family-role" [class.visible]="changeHeightAndWidth">
+                <h1 class="logo-img-headline-first"> Family Life</h1>
+                <h1 class="logo-img-headline-second"> Organizer</h1>
 
-        <div class="family-role-box"
-  [class.child]="isChildActive()"
-  [class.parent]="!isChildActive()">
 
-    <mat-icon class="material-symbols-outlined">
-    {{ isChildActive() ? 'child_care' : 'family_restroom' }}
-    </mat-icon>
-    <span>  {{ isChildActive() ? 'Für Kinder' : 'Für Eltern' }}</span>
+            </div>
+           
+        </section>
+        <div class="family-role" [class.visible]="changeHeightAndWidth">
+
+            <div class="family-role-box" [class.child]="isChildActive()" [class.parent]="!isChildActive()">
+
+                <mat-icon class="material-symbols-outlined">
+                    {{ isChildActive() ? 'child_care' : 'family_restroom' }}
+                </mat-icon>
+                <span> {{ isChildActive() ? 'Für Kinder' : 'Für Eltern' }}</span>
+            </div>
+
+
+
+        </div>
+
+
+
     </div>
-
-
-
-</div>
-
-  
-
-</div>
 
 
 

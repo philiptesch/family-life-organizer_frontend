@@ -1,15 +1,9 @@
-
-
-
-
-
-
 .main-page {
-    position:absolute;
+    position: absolute;
     left: 0;
     right: 0;
-    top:0;
-    background:radial-gradient(#7B5E8E, #ffff, #cc91e5);
+    top: 0;
+    background: radial-gradient(#7B5E8E, #ffff, #cc91e5);
     margin: 0;
     display: flex;
     justify-content: center;
@@ -20,32 +14,32 @@
 }
 
 .role-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
 }
 
 .right-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .logo-section {
-display: flex;
-align-items: center;
-gap: 30px;
-position: absolute;
-top: 50%;
-left: 50%;
-justify-content: center;
-transform: translate(-50%, -50%, );
-animation: move-to-corner 1.2s ease-in-out 1s normal forwards;
-padding: 15px 150px;
-z-index: 999;
-flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    transform: translate(-50%, -50%, );
+    animation: move-to-corner 1.2s ease-in-out 1s normal forwards;
+    padding: 15px 150px;
+    z-index: 999;
+    flex-direction: column;
 
     @media (max-width: 760px) {
         padding: 15px;
@@ -53,12 +47,12 @@ flex-direction: column;
 
     }
 
-.logo-img {
-width: 300px;
-height: 300px;
-animation: small-image 600ms ease-in-out 1.2s normal forwards;
-   
-}
+    .logo-img {
+        width: 300px;
+        height: 300px;
+        animation: small-image 600ms ease-in-out 1.2s normal forwards;
+
+    }
 
 }
 
@@ -70,50 +64,51 @@ section {
 }
 
 .family-role {
- opacity: 0;
- transition: opacity 1s ease-in-out; ;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    ;
 }
 
 
 .hidden {
-  opacity: 0;
+    opacity: 0;
 }
 
 .visible {
-  opacity: 1;
+    opacity: 1;
 }
 
 .family-role-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 7px 15px;
-  border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 15px;
+    border-radius: 10px;
 
-  transition:
-    background-color 500ms ease,
-    color 500ms ease,
-    transform 300ms ease;
+    transition:
+        background-color 500ms ease,
+        color 500ms ease,
+        transform 300ms ease;
 }
 
 .family-role-box:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .parent {
-  background-color: #D19CE7;
-  color: #8000ff;
+    background-color: #D19CE7;
+    color: #8000ff;
 }
 
 .child {
-  background-color: #e0ecd7;
-  color: #76A454;
+    background-color: #e0ecd7;
+    color: #76A454;
 }
 
 .logo-img-headline h1 {
     margin: 0;
     transform: translateX(-100%);
-    animation: slideHeadliner 800ms ease-in-out  500ms normal forwards, changefontsize 500ms ease-in-out 1.3s forwards;
+    animation: slideHeadliner 800ms ease-in-out 500ms normal forwards, changefontsize 500ms ease-in-out 1.3s forwards;
     margin-block-start: 30px;
     margin-block-end: 30px;
 }
@@ -149,42 +144,42 @@ section {
 
 
 .skip-animation {
-  position: absolute;
-  top: 10px;
-  left: 0px;
-  gap: 10px;
-  justify-content: flex-start;
-  transform: translate(0, 0);
-  animation: none;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    gap: 10px;
+    justify-content: flex-start;
+    transform: translate(0, 0);
+    animation: none;
 
 
     @media (max-width: 600px) {
-    top: 20px;
-    left: 35px; 
-    width: 80%;
-    justify-content: center;
-    align-items: flex-start;
+        top: 20px;
+        left: 35px;
+        width: 80%;
+        justify-content: center;
+        align-items: flex-start;
     }
 
     @media (max-width: 450px) {
-    left: 0;
-    top: 0;
+        left: 0;
+        top: 0;
     }
 
 }
 
 .skip-animation .logo-img {
-  width: 60px;
-  height: 60px;
-  animation: none;
+    width: 60px;
+    height: 60px;
+    animation: none;
 }
 
 .skip-animation .logo-img-headline h1 {
-  transform: translateX(0);
-  animation: none;
-  font-size: 20px;
-  margin-block-start: 0px;
-  margin-block-end: 5px;
+    transform: translateX(0);
+    animation: none;
+    font-size: 20px;
+    margin-block-start: 0px;
+    margin-block-end: 5px;
 }
 
 
@@ -200,7 +195,7 @@ section {
         top: 50%;
         left: 50%;
         justify-content: center;
-        transform: translate(-50%, -50% );
+        transform: translate(-50%, -50%);
     }
 
     to {
@@ -208,7 +203,7 @@ section {
         left: 0px;
         gap: 10px;
         justify-content: flex-start;
-        transform: translate(0,0);
+        transform: translate(0, 0);
     }
 }
 
@@ -216,7 +211,7 @@ section {
 
 
     to {
-        font-size:20px;
+        font-size: 20px;
         margin-block-start: 0px;
         margin-block-end: 5px;
     }

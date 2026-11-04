@@ -4,56 +4,56 @@
 
   </header>
 
- 
 
-  <div  class="login-wrapper"  [ngClass]="loginAnimation ? 'newLoginAnimation' : 'startAnimationBackground'" >
 
-  <div class="parent_bg" [class.hidden]="isChildLoginActive"></div>
+  <div class="login-wrapper" [ngClass]="loginAnimation ? 'newLoginAnimation' : 'startAnimationBackground'">
 
-  <div class="child_bg" [class.visible]="isChildLoginActive"></div>
+    <div class="parent_bg" [class.hidden]="isChildLoginActive"></div>
+
+    <div class="child_bg" [class.visible]="isChildLoginActive"></div>
 
     <section class="headline">
 
       <div class="header-togglebar">
-      
 
 
-         <label class="switch">
-        <input (change)="toggleMode()" type="checkbox">
 
-        <span class="slider">
+        <label class="switch">
+          <input (change)="toggleMode()" type="checkbox">
 
-          <mat-icon class="icon family">
-            family_restroom
-          </mat-icon>
+          <span class="slider">
 
-          <mat-icon class="icon child">
-            child_care
-          </mat-icon>
+            <mat-icon class="icon family">
+              family_restroom
+            </mat-icon>
 
-        </span>
-      </label>
+            <mat-icon class="icon child">
+              child_care
+            </mat-icon>
+
+          </span>
+        </label>
       </div>
 
       <div class="child-info-content">
         <div class="speech-bubble-content">
-        <img src="\assets\img\childs.png" alt="">
-         <div class="speech-bubble">
-    Hier kannst du auswählen, ob du dich als Kind oder als Elternteil anmeldest.
-    </div>
+          <img src="\assets\img\childs.png" alt="">
+          <div class="speech-bubble">
+            Hier kannst du auswählen, ob du dich als Kind oder als Elternteil anmeldest.
+          </div>
+        </div>
       </div>
-         </div>
 
 
       <div class="login-part">
 
-      @if(!isChildLoginActive) {
-      <app-partent-login ></app-partent-login>
-      }@else{
-      <app-child-login></app-child-login>
-      }
-        </div>  
-     </section>
+        @if(!isChildLoginActive) {
+        <app-partent-login></app-partent-login>
+        }@else{
+        <app-child-login></app-child-login>
+        }
+      </div>
+    </section>
 
   </div>
 
