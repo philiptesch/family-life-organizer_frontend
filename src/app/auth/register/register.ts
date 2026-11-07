@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
 import { ChildAvatar } from './child-avatar/child-avatar';
 import { ChildList } from './child-list/child-list';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { FormControl,FormArray, FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { User } from '../../interfaces/user';
 import { Child } from '../../interfaces/child';
 import { ChildService } from '../../services/ChildService';
@@ -34,7 +34,7 @@ signUpForm  = new FormGroup({
   email: new FormControl('', { nonNullable: true }),
   password: new FormControl('', { nonNullable: true }),
   confirmPassword: new FormControl('', { nonNullable: true }),
- childs: new FormControl<Child[]>([], { nonNullable: true })
+   childs: new FormArray<FormGroup>([])
 })
 
 
@@ -70,7 +70,7 @@ showConfirmPassword() {
 
 
 showChildAvatar() {
-this.parentData = this.signUpForm.getRawValue();
+this.parentData  = this.signUpForm.getRawValue() as User;
 
 this.ChildService.ChangeRegisterSite(2)
 
@@ -116,9 +116,10 @@ checkChildsInfo(childInfo: Child[]) {
 }
 
 receivedChildData(event: Child) {
+let child = this.childFormGroup(event)
 console.log("tester",event);
-this.signUpForm.value.childs?.push(event)
-this.childData = this.signUpForm.value.childs! 
+this.signUpForm.controls.childs.push(child)
+this.childData = this.signUpForm.controls.childs.getRawValue() as Child[]
 console.log('this.childData ', this.childData, "Kinder: ", this.childData.length, this.childData[0].name );
 
 

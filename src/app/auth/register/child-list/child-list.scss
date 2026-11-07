@@ -62,7 +62,8 @@ background-color: #FFFFFF;
 padding: 5px;
 margin-top: 20px;
 box-shadow: 0 8px 30px rgba(80, 110, 170, 0.12);
-
+display: flex;
+flex-direction: column;
 
 .childAvatar {
 display: flex;

@@ -14,17 +14,24 @@
     </div>
 
 
+  @for (childs of childData(); track childs.name   ) {
     <div class="childInfoSection">
 
 
      <div class="ChildAvatarSection">
+      
+            
+      
         <div class="childAvatar" >
             <img  class="icon" src="/assets/img/avatar_single_1_small2.png" alt="">
             <div class="childInfo">
-            <span> Max</span>
-             <span> 8 Jahre</span>   
+            <span> {{ childs.name  }} </span>
+             <span> {{ childs.age  }} </span>   
             </div>
+    
     </div>
+
+
             <div class="childAvatarChange">
 
                 <div class="editIcon">
@@ -43,13 +50,11 @@
 
         </div>
 
-
-           
-
 </div>   
 
 
     </div>
+    }
      <div class="addnewAvatarSection">
 
                 <div class="newChild" >
