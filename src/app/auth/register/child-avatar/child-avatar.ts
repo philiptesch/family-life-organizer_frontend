@@ -1,4 +1,4 @@
-import { Component, inject, output , Output,EventEmitter, input} from '@angular/core';
+import { Component, inject, output , Output,EventEmitter, input, effect} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -7,6 +7,7 @@ import {Router} from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule,   } from '@angular/forms';
 import { Child } from '../../../interfaces/child';
 import { User } from '../../../interfaces/user';
+import { ChildService } from '../../../services/ChildService';
 @Component({
   selector: 'app-child-avatar',
   imports: [CommonModule, MatIconModule, ReactiveFormsModule, FormsModule],
@@ -32,7 +33,7 @@ export class ChildAvatar {
 
   parent = input<User>()
 
-
+  public ChildService = inject(ChildService);  
   returnToRegister = output<number>()
   @Output() childIsActive = new EventEmitter();
   childData = output<Child>();
@@ -52,6 +53,24 @@ export class ChildAvatar {
 
 
     
+}
+
+
+constructor() {
+  this.reactedOfEditChild()
+}
+
+
+
+reactedOfEditChild() {
+    effect(() => {
+      console.log("KinderListet:", this.ChildService.selectedChild());
+      let child = this.ChildService.selectedChild()
+      if (child) {
+         console.log('neues Child',child);
+      }
+    
+    });
 }
 
  emitEvent() {

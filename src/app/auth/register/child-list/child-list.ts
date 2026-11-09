@@ -1,8 +1,8 @@
-import { Component, output,  input, effect } from '@angular/core';
+import { Component, output,  input, effect, inject } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { Child } from '../../../interfaces/child';
-
+import { ChildService } from '../../../services/ChildService';
 
 @Component({
   selector: 'app-child-list',
@@ -12,9 +12,10 @@ import { Child } from '../../../interfaces/child';
 })
 export class ChildList {
   returnToRegister = output<number>()
-
+  returnToAvatar = output<number>()
+  public ChildService = inject(ChildService);  
   childData = input<Child[]>([]);
-
+  
 
   constructor() {
     effect(() => {
@@ -30,6 +31,20 @@ export class ChildList {
 
   goToRegister() {
   this.returnToRegister.emit(1)
+  }
+
+   returnToAvatarSite() {
+  this.returnToAvatar.emit(2)
+  }
+
+  addnewChild() {
+    this.ChildService.ChangeRegisterSite(2)
+  }
+
+
+  editChildData(child:Child) {
+    this.ChildService.editChildAvatar(child)
+    this.returnToAvatarSite()
   }
 
 }

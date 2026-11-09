@@ -9,11 +9,11 @@
     <div class="register-section">
 
       @if (registerSiteNumber === 3) {
-        <app-child-list  (returnToRegister)="showRegisterCardFromChildList($event)" [childData]="childData"></app-child-list>
+        <app-child-list  (returnToRegister)="showRegisterCardFromChildList($event)" (returnToAvatar)="showChildAvatarSite($event)" [childData]="childData"></app-child-list>
       } 
 
       @if (registerSiteNumber === 2) {
-         <app-child-avatar  (returnToRegister)="showRegisterCard($event)"  
+         <app-child-avatar  (returnToRegister)="showRegisterCard($event) "  
       
       [parent]="parentData"
       (childData)="receivedChildData($event)">  </app-child-avatar>

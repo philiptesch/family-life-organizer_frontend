@@ -90,6 +90,10 @@ showChildAvatarList() {
   this.ChildService.ChangeRegisterSite(3)
 }
 
+showChildAvatarSite(event: number) {
+  this.ChildService.ChangeRegisterSite(event)
+}
+
 
 showRegisterCardFromChildList(event: number) {
    this.ChildService.ChangeRegisterSite(event)

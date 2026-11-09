@@ -34,7 +34,7 @@
 
             <div class="childAvatarChange">
 
-                <div class="editIcon">
+                <div (click)="editChildData(childs)" class="editIcon">
                     <mat-icon class="edit" > edit</mat-icon>
                 </div>
 
@@ -60,7 +60,7 @@
                 <div class="newChild" >
 
                     <div class="btn-section">
-                    <button>  <mat-icon class="addIcon" > add</mat-icon> </button>
+                    <button (click)="addnewChild()">  <mat-icon class="addIcon" > add</mat-icon> </button>
                 
                     <div class="btn-section-Text">
                     <span class="addChildSpanText"> Weiteres Kind hinzufügen</span>
