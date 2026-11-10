@@ -65,9 +65,12 @@ constructor() {
 reactedOfEditChild() {
     effect(() => {
       console.log("KinderListet:", this.ChildService.selectedChild());
-      let child = this.ChildService.selectedChild()
-      if (child) {
-         console.log('neues Child',child);
+      const selectedChild = this.ChildService.selectedChild();
+      if (selectedChild !== null) {
+      this.child = selectedChild
+        }
+      if (this.child) {
+         console.log('neues Child',this.child);
       }
     
     });
@@ -119,7 +122,7 @@ navigateToLogin() {
 
 
       console.log(ng.value);
-      console.log(this.child);
+      console.log(this.child.id);
       console.log("PaRENT", this.parent);
       
       this.checkBirthdatAllowed(this.child.birthdate)

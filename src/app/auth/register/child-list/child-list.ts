@@ -47,4 +47,9 @@ export class ChildList {
     this.returnToAvatarSite()
   }
 
+  deleteChildData(child:Child) {
+    console.log('kinds', child, child);
+    
+  }
+
 }
