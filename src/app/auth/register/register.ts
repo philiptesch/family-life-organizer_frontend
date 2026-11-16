@@ -73,7 +73,7 @@ showChildAvatar() {
 this.parentData  = this.signUpForm.getRawValue() as User;
 
 this.ChildService.ChangeRegisterSite(2)
-
+this.ChildService.noEditChild(false)
 }
 
 
@@ -90,7 +90,7 @@ showChildAvatarList() {
   this.ChildService.ChangeRegisterSite(3)
 }
 
-showChildAvatarSite(event: number) {
+showChildAvatarSite(event: number,) {
   this.ChildService.ChangeRegisterSite(event)
 }
 

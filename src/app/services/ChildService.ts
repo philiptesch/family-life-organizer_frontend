@@ -6,8 +6,9 @@ import { Child } from '../interfaces/child';
 })
 export class ChildService {
    
-   registerSite = signal<number>(1)
+  registerSite = signal<number>(1)
   selectedChild = signal<Child | null>(null);
+  toggleEditAvatarSite =signal <boolean> (true)
 
    ChangeRegisterSite(value: number) { 
     this.registerSite.set(value)
@@ -18,4 +19,12 @@ export class ChildService {
    editChildAvatar(child: Child) {
     this.selectedChild.set(child)
    }
+
+
+   noEditChild(showEditAvatarSite:boolean) {
+    this.toggleEditAvatarSite.set(showEditAvatarSite)
+    console.log(this.toggleEditAvatarSite);
+    
+   }
+
 }     

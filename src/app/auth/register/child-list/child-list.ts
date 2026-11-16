@@ -44,6 +44,7 @@ export class ChildList {
 
   editChildData(child:Child) {
     this.ChildService.editChildAvatar(child)
+    this.ChildService.noEditChild(true)
     this.returnToAvatarSite()
   }
 

@@ -8,6 +8,8 @@ import { FormBuilder, FormControl, FormGroup, FormsModule, NgForm, ReactiveForms
 import { Child } from '../../../interfaces/child';
 import { User } from '../../../interfaces/user';
 import { ChildService } from '../../../services/ChildService';
+import { nanoid } from 'nanoid';
+
 @Component({
   selector: 'app-child-avatar',
   imports: [CommonModule, MatIconModule, ReactiveFormsModule, FormsModule],
@@ -58,23 +60,29 @@ export class ChildAvatar {
 
 constructor() {
   this.reactedOfEditChild()
+
 }
 
 
 
 reactedOfEditChild() {
-    effect(() => {
-      console.log("KinderListet:", this.ChildService.selectedChild());
-      const selectedChild = this.ChildService.selectedChild();
-      if (selectedChild !== null) {
-      this.child = selectedChild
-        }
-      if (this.child) {
-         console.log('neues Child',this.child);
-      }
-    
-    });
+  effect(() => {
+    const isToggleEdit = this.ChildService.toggleEditAvatarSite();
+    console.log("toggleListe:", isToggleEdit);
+    if (!isToggleEdit) {
+      return; 
+    }
+    const selectedChild = this.ChildService.selectedChild();
+    console.log("KinderListet:", selectedChild);
+
+    if (selectedChild !== null) {
+      this.child = selectedChild;
+      console.log('neues Child', this.child);
+    }
+  });
 }
+
+
 
  emitEvent() {
     this.returnToRegister.emit(1)
@@ -122,6 +130,7 @@ navigateToLogin() {
 
 
       console.log(ng.value);
+      this.child.id = this.generateRandomIDTest()
       console.log(this.child.id);
       console.log("PaRENT", this.parent);
       
@@ -136,6 +145,12 @@ navigateToLogin() {
       }, 2000);
       
       
+
+}
+
+generateRandomIDTest() {
+return nanoid(10);
+
 
 }
 
