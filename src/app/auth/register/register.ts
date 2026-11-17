@@ -57,6 +57,20 @@ constructor() {
 
 
 
+reactedOfEditChild() {
+  effect(() => {
+    const selectedChild = this.ChildService.selectedChild();
+    console.log("KinderListeterererer:", selectedChild);
+
+    if (selectedChild !== null) {
+      this.childData = [selectedChild];
+      console.log('neues Child', this.childData );
+    }
+  });
+}
+
+
+
 showPassword() {
   this.passwordIconVisible = !this.passwordIconVisible
 

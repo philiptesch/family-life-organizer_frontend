@@ -128,24 +128,39 @@ navigateToLogin() {
   
     onSubmit(event:Event, ng: NgForm) {
 
+      if (this.child.id == "" ) { 
+          console.log(ng.value);
+          this.child.id = this.generateRandomIDTest()
+          console.log(this.child.id);
+          console.log("PaRENT", this.parent);
+          this.checkBirthdatAllowed(this.child.birthdate)
+          this.newChildHasBeenAdded =true
+          setTimeout(() => {
+          this.childInfoToRegister(this.child)
+          this.newChildHasBeenAdded =false
+          ng.resetForm();
+          this.emitEvent()
+          }, 2000);
 
-      console.log(ng.value);
-      this.child.id = this.generateRandomIDTest()
-      console.log(this.child.id);
-      console.log("PaRENT", this.parent);
       
-      this.checkBirthdatAllowed(this.child.birthdate)
-      this.newChildHasBeenAdded =true
-    
-      setTimeout(() => {
-      this.childInfoToRegister(this.child)
-      this.newChildHasBeenAdded =false
-      ng.resetForm();
-      this.emitEvent()
-      }, 2000);
-      
-      
+      }  else {
+          this.changeChildData(ng)
 
+      }
+
+}
+
+
+changeChildData(form: NgForm) {
+  console.log("Kind Änundern", this.child);
+  this.ChildService.editChildAvatar(this.child)
+    this.newChildHasBeenAdded =true
+          setTimeout(() => {
+          this.newChildHasBeenAdded =false
+          form.resetForm();
+          this.emitEvent()
+          }, 2000);
+  
 }
 
 generateRandomIDTest() {
