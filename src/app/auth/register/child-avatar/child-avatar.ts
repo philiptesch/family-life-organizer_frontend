@@ -154,6 +154,7 @@ navigateToLogin() {
 changeChildData(form: NgForm) {
   console.log("Kind Änundern", this.child);
   this.ChildService.editChildAvatar(this.child)
+  this.ChildService.changeChildDaTa(this.child)
     this.newChildHasBeenAdded =true
           setTimeout(() => {
           this.newChildHasBeenAdded =false

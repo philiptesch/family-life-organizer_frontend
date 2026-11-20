@@ -53,22 +53,33 @@ constructor() {
       this.registerSiteNumber = this.ChildService.registerSite()
     );
       });
+      this.getChildData()
 }
 
+
+getChildData()  {
+      effect(() => {
+      this.childData = this.ChildService.childData()
+      });
+
+}
 
 
 reactedOfEditChild() {
   effect(() => {
     const selectedChild = this.ChildService.selectedChild();
-    console.log("KinderListeterererer:", selectedChild);
+    const children = this.ChildService.childData();
 
     if (selectedChild !== null) {
-      this.childData = [selectedChild];
-      console.log('neues Child', this.childData );
+      const updatedChild = children.find(data => data.id === selectedChild.id);
+
+      if (updatedChild) {
+        this.childData = [updatedChild];
+        console.log('Neues Child:', this.childData);
+      }
     }
   });
 }
-
 
 
 showPassword() {
@@ -138,6 +149,7 @@ let child = this.childFormGroup(event)
 console.log("tester",event);
 this.signUpForm.controls.childs.push(child)
 this.childData = this.signUpForm.controls.childs.getRawValue() as Child[]
+this.ChildService.childData.set(this.childData);
 console.log('this.childData ', this.childData, "Kinder: ", this.childData.length, this.childData[0].name );
 
 
