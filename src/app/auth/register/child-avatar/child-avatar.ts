@@ -76,7 +76,7 @@ reactedOfEditChild() {
     console.log("KinderListet:", selectedChild);
 
     if (selectedChild !== null) {
-      this.child = selectedChild;
+      this.child = { ...selectedChild };
       console.log('neues Child', this.child);
     }
   });
@@ -144,25 +144,41 @@ navigateToLogin() {
 
       
       }  else {
+          console.log("Array vorher:", this.ChildService.childData());
           this.changeChildData(ng)
 
       }
 
 }
 
-
 changeChildData(form: NgForm) {
-  console.log("Kind Änundern", this.child);
-  this.ChildService.editChildAvatar(this.child)
-  this.ChildService.changeChildDaTa(this.child)
-    this.newChildHasBeenAdded =true
-          setTimeout(() => {
-          this.newChildHasBeenAdded =false
-          form.resetForm();
-          this.emitEvent()
-          }, 2000);
-  
+
+  const updatedChild = { ...this.child };
+
+  console.log('Kind vor Update:', updatedChild);
+
+  this.ChildService.editChildAvatar(updatedChild);
+  this.ChildService.changeChildDaTa(updatedChild);
+
+  console.log('Array nachher:', this.ChildService.childData());
+
+  this.newChildHasBeenAdded = true;
+
+  setTimeout(() => {
+    this.newChildHasBeenAdded = false;
+    form.resetForm();
+    this.emitEvent();
+  }, 2000);
 }
+
+
+reactToNewChildData() {
+    effect(() => {
+    const child = this.ChildService.childData();
+    console.log("child:", child);
+    
+    });
+  }
 
 generateRandomIDTest() {
 return nanoid(10);

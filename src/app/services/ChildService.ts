@@ -24,21 +24,19 @@ export class ChildService {
    }
 
 
-   editChildAvatar(child: Child) {
-    this.selectedChild.set(child)
+editChildAvatar(child: Child) {
+  this.selectedChild.set(child);
+}
 
-   }
+addnNewChild(child: Child) {
+  this.childData.update(children => [...children, child]);
+}
+
 changeChildDaTa(child: Child) {
   this.childData.update(children =>
-    children.map(childInfo => {
-      if (childInfo.id === child.id) {
-       console.log('this.childData', this.childData());
-        return child;
-      }
-      console.log('this.childData', this.childData());
-      
-      return childInfo;
-    })
+    children.map(childInfo =>
+      childInfo.id === child.id ? child : childInfo
+    )
   );
 }
 

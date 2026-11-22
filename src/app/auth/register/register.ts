@@ -145,11 +145,13 @@ checkChildsInfo(childInfo: Child[]) {
 }
 
 receivedChildData(event: Child) {
-let child = this.childFormGroup(event)
+const childData = { ...event };
+let childForm = this.childFormGroup(event)
 console.log("tester",event);
-this.signUpForm.controls.childs.push(child)
-this.childData = this.signUpForm.controls.childs.getRawValue() as Child[]
-this.ChildService.childData.set(this.childData);
+console.log('FormGroup:', childForm.getRawValue());
+this.signUpForm.controls.childs.push(childForm)
+this.childData = this.signUpForm.controls.childs.getRawValue() as Child[];
+this.ChildService.addnNewChild(childData)
 console.log('this.childData ', this.childData, "Kinder: ", this.childData.length, this.childData[0].name );
 
 
