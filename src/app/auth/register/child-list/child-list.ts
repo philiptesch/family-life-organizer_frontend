@@ -39,6 +39,7 @@ export class ChildList {
 
   addnewChild() {
     this.ChildService.ChangeRegisterSite(2)
+    this.openNewChildSection()
   }
 
 
@@ -48,9 +49,15 @@ export class ChildList {
     this.returnToAvatarSite()
   }
 
-  deleteChildData(child:Child) {
-    console.log('kinds', child, child);
+  
+
+  deleteChildData(key: string) {
+    this.ChildService.deleteChild(key)
     
+  }
+
+  openNewChildSection() {
+  this.ChildService.openCreateNewChild(false)
   }
 
 }

@@ -9,6 +9,7 @@ import { Child } from '../../../interfaces/child';
 import { User } from '../../../interfaces/user';
 import { ChildService } from '../../../services/ChildService';
 import { nanoid } from 'nanoid';
+import { runEffect } from '@angular/core/primitives/signals';
 
 @Component({
   selector: 'app-child-avatar',
@@ -60,7 +61,7 @@ export class ChildAvatar {
 
 constructor() {
   this.reactedOfEditChild()
-
+  this.ReactToAddNewchild()
 }
 
 
@@ -80,6 +81,27 @@ reactedOfEditChild() {
       console.log('neues Child', this.child);
     }
   });
+}
+
+ReactToAddNewchild() {
+    effect(() => {
+    const checkNewChild = this.ChildService.toggleNewChildAvatar();
+    if (checkNewChild) {
+      this.child = this.createEmptyChild()
+    }
+
+  });
+}
+
+createEmptyChild() {
+    return {
+    id: '',
+    name: '',
+    age: '',
+    birthdate: '',
+    gender: '',
+    image: this.imageSrc
+  };
 }
 
 
