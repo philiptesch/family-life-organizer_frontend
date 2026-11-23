@@ -23,7 +23,8 @@ export class ChildList {
       this.childData= this.ChildService.childData()
       for (let index = 0; index < this.childData.length; index++) {
         const element = this.childData[index].name;
-        console.log(element);
+        const img = this.childData[index].image;
+        console.log(element, img);
         
       }
     });

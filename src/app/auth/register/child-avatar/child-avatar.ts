@@ -151,7 +151,9 @@ navigateToLogin() {
     onSubmit(event:Event, ng: NgForm) {
 
       if (this.child.id == "" ) { 
+         this.child.image = this.checkImage(this.child.image)
           console.log(ng.value);
+          console.log('this.child.image', this.child.image);
           this.child.id = this.generateRandomIDTest()
           console.log(this.child.id);
           console.log("PaRENT", this.parent);
@@ -167,11 +169,27 @@ navigateToLogin() {
       
       }  else {
           console.log("Array vorher:", this.ChildService.childData());
+          this.child.image = this.checkImage(this.child.image)
+          console.log('this.child.image', this.child.image);
+          
           this.changeChildData(ng)
 
       }
 
 }
+
+checkImage(image: string): string {
+  console.log('Original:', image);
+  console.log('Enthält large:', image.includes('large'));
+  const imageStart = '/assets/img/avatar_single_';
+
+  if (image.startsWith(imageStart)) {
+    return image.replace('large', 'small');
+  }
+
+  return image;
+}
+
 
 changeChildData(form: NgForm) {
 
