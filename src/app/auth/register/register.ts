@@ -8,6 +8,7 @@ import { FormControl,FormArray, FormGroup, FormsModule, ReactiveFormsModule  } f
 import { User } from '../../interfaces/user';
 import { Child } from '../../interfaces/child';
 import { ChildService } from '../../services/ChildService';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -22,7 +23,7 @@ passwordIconVisible: boolean = false;
 passwordConfirmIconVisible: boolean = false;
 registerSiteNumber: number =1;
 childData: Child[] = [] 
-
+ private router = inject(Router);
 
 parentData!: User
 ValueRegisterChildInfoIsEmpty: boolean = false
@@ -171,7 +172,9 @@ childFormGroup(child: Child) {
 
 
 
-
+goToLogin() {
+this.router.navigate(['/login']);
+}
 
 
 

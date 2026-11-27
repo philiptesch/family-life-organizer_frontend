@@ -151,7 +151,7 @@ navigateToLogin() {
     onSubmit(event:Event, ng: NgForm) {
 
       if (this.child.id == "" ) { 
-         this.child.image = this.checkImage(this.child.image)
+         this.child.image = this.checkImage(this.imageSrc)
           console.log(ng.value);
           console.log('this.child.image', this.child.image);
           this.child.id = this.generateRandomIDTest()

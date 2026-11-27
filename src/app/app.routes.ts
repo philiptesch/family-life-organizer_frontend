@@ -8,7 +8,7 @@ import { ChildAvatar } from './auth/register/child-avatar/child-avatar';
 
 export const routes: Routes = [ 
      { path: '', redirectTo: 'login', pathMatch: 'full' },
-    { path: '',component: Login },
+    { path: 'login',component: Login },
     {path: 'signUp', component: Register },
     {path: 'avatar', component: ChildAvatar },
 
